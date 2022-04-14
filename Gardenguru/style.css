@@ -114,41 +114,40 @@ body::after {
 
 
 .intro{
- /* top: 0;
- right: 0;
- bottom: 0;
- left: 0; */
- display: flex;
- flex-direction: column;
- min-height: 100vh;
- align-items: center;
- align-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* facem un slide introductiv care ocupa intreaga pagina */
+  align-items: center;
+  align-content: center;
 }
 
+.about{
+  background-image: url("/PIXNIO-221327-5472x3648.jpg"); /* intro pt. pagina de about*/
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
 .intro>.text{
-  padding: 30px;
+  padding: 50px; /* header-ul e fixed; daca nu bag padding, o sa apara in spatele header-ului */
   padding-top: 45vh;
   font-size: 12px;
 }
 
 
-
 .introLogin{
-  min-height: 20vh;
+  min-height: 20vh; /* padding partial pt. fereastra de login */
 }
 
 
 
 .login{
-  /* padding-top: 30vh; */
-  /* height: 40vh; */
-  /* top: 30vh; */
   height: 300px;
   background-color: purple;
   display: flex;
   flex-direction: column;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
  }
@@ -158,7 +157,6 @@ body::after {
   padding: 1rem;
   height: 100%;
   border-radius: 5px;
-  /* filter: drop-shadow(1px 1px 1px black); */
   box-shadow: 1px 1px;
 }
 
@@ -166,18 +164,7 @@ body::after {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 20px;
-  /* position: relative; */
 }
-
-/* .login .loginform .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
-/* .login>.loginform>.user-details>.input-box{
-  display: block;
-} */
 
 .login .details{
   font-size: 16px;
@@ -187,7 +174,7 @@ body::after {
 
 
 .input-box input{
-  display: block;
+  display: block; /* cu display: block pun div-urile pe linii noi */
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
@@ -196,14 +183,10 @@ body::after {
 }
 
 .login .loginbutton{
-  /* padding-top: 5px; */
   align-self: flex-end;
 }
 
 .loginbutton a{
-  /* display: block; */
-  /* margin-top: auto; */
-  /* justify-content: flex-end; */
 }
 
 .input-box span{
@@ -235,15 +218,9 @@ body::after {
 
 
 .register{
-  /* padding-top: 30vh; */
-  /* height: 40vh; */
-  /* top: 30vh; */
   height: 400px;
-  /* background-color: purple; */
   display: flex;
   flex-direction: column;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
  }
@@ -253,7 +230,6 @@ body::after {
   padding: 1rem;
   height: 100%;
   border-radius: 5px;
-  /* filter: drop-shadow(1px 1px 1px black); */
   box-shadow: 1px 1px;
 }
 
@@ -261,24 +237,12 @@ body::after {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 20px;
-  /* position: relative; */
 }
-
-/* .login .loginform .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
-/* .login>.loginform>.user-details>.input-box{
-  display: block;
-} */
 
 .registerform .details{
   font-family: 'Public Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
-  /* font-weight: 500; */
   margin-bottom: 20px;
 }
 
@@ -293,16 +257,12 @@ body::after {
 }
 
 .registerform .registerbutton{
-  /* padding-top: 5px; */
   align-self: flex-end;
 }
 
 .registerbutton a{
   font-size: 12px;
   font-family: 'Public Sans', sans-serif;
-  /* display: block; */
-  /* margin-top: auto; */
-  /* justify-content: flex-end; */
 }
 
 .input-box span{
@@ -346,60 +306,13 @@ body::after {
 
 
 
-/*
-.container1{
-  background-color: red;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-/* .container1>.image{ */
-  /* object-fit: contain; */
-  /* flex: 0 0 auto;
-} */
-
-/* .container1>.image>img{
-  display: block; */
-  /* width: 55%;
-  max-height: 60%; */
-  /* height: 60vh;
-  object-fit: cover;
-} */
-
-/* .container1>.text{
-  flex: 0 0 auto;
-  padding-right: 10vw;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .container1 {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr); /* asta e facuta pe grid generator;
+                                             nu stiu exact ce reprezinta fiecare linie da nu prea e important
+                                          */
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -409,27 +322,14 @@ body::after {
   background-color: blue;
 }
 .container1>.image>img {
-  /* max-width: 100%; */
-  /* place-self: center; */
-  /* object-position: center; */
-  /* object-fit: contain; */
-  /* padding-left: 5rem; */
-  /* height: 40vh;
-  width: 40vw */
-  /* height: 80%; */
-  /* justify-content: flex-end; */
-  /* background-color: blue; */
-  object-fit: cover;
-  /* object-position: center; */
+  object-fit: cover; /* imaginea va fi crop-ata astfel incat sa ocupe tot grid item-ul in care se afla */
   height: 400px;
   width: 100%;
-  /* max-height: 100%; */
 }
 .container1>.text {
   grid-area: 1 / 7 / 4 / 11;
   width: 100%
   height: 100%;
-  /* background-color: red; */
   display: flex;
   align-self: center;
   padding-left: 2rem;
@@ -465,21 +365,9 @@ body::after {
   background-color: blue;
 }
 .container2>.image>img {
-  /* max-width: 100%; */
-  /* place-self: center; */
-  /* object-position: center; */
-  /* object-fit: contain; */
-  /* padding-left: 5rem; */
-  /* height: 40vh;
-  width: 40vw */
-  /* height: 80%; */
-  /* justify-content: flex-end; */
-  /* background-color: blue; */
   object-fit: cover;
-  /* object-position: center; */
   height: 400px;
   width: 100%;
-  /* max-height: 100%; */
 }
 .container2>.text {
   grid-area: 1 / 1 / 4 / 5;
@@ -509,33 +397,6 @@ body::after {
 
 
 
-/* .container2{
-  background-color: red;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container2>.text{
-  flex: 0 0 auto;
-  padding: 10vw;
-}
-
-.container2>.image{
-  flex: 0 0 auto;
-  object-fit: contain;
-}
-
-.container2>.image>img{
-  display: block;
-  max-width: 100%;
-  max-height: 30rem;
-} */
-
-
-
 
 
 
@@ -562,48 +423,28 @@ body::after {
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 80vh;
+  height: 600px;
 }
 
 .aboutcontainer>.image {
   grid-area: 2 / 2 / 6 / 6;
-  /* max-width: 100%; */
-  /* object-fit: cover;
-  width: 100%;
-  height: 100%; */
-  /* place-self: center; */
-  /* align-self: center;
-  justify-self: start; */
-  /* justify-self: end; */
-  /* padding-right */
-  /* margin-left: auto; */
   background-color: blue;
 }
 
 .aboutcontainer>.image>img {
-  /* max-width: 100%; */
-  /* place-self: center; */
-  /* object-position: center; */
-  /* object-fit: contain; */
-  /* padding-left: 5rem; */
-  /* height: 40vh;
-  width: 40vw */
-  /* height: 80%; */
-  object-fit: contain;
-  /* justify-content: flex-end; */
+  object-fit: cover;
   width: 100%;
-  max-height: 100%;
+  height: 400px;
   background-color: blue;
 }
 
 .aboutcontainer>.name {
   grid-area: 2 / 6 / 3 / 10;
-  /* background-color: red; */
-  font-weight: bold;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
   align-self: center;
   padding: 1rem;
-  /* padding-top: 2rem; */
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .aboutcontainer>.text {
@@ -611,105 +452,32 @@ body::after {
   background-color: orange;
   padding: 2rem 1rem;
   padding-right: 2%;
-  font-size: 18px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
 }
 
 .aboutcontainer>.buttons {
   grid-area: 5 / 6 / 6 / 10;
-  /* background-color: green; */
-  /* align-self: center;
-  margin-left: 2%; */
-  /* margin-right: 10%; */
-  /* padding-left: 2rem; */
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; */
-  /* justify-content: space-evenly; */
-  /* gap: 1rem; */
+  align-self: center;
+  padding-left: 20px;
+}
+
+.aboutcontainer>.buttons a{
+  transition: 250ms;
+  padding-right: 20px;
+}
+
+.aboutcontainer>.buttons a:hover {
+  color: black; /* animatie pe hover */
+}
+
+.aboutcontainer>.buttons a:focus{
+  color: red; /* animatie pe click; nu cred ca o sa o tinem ca te duce efectiv pe alta pagina instant */
 }
 
 
 
 
-/* CSS */
-.button-3 {
-  appearance: none;
-  background-color: #2ea44f;
-  border: 1px solid rgba(27, 31, 35, .15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 6px 16px;
-  /* position: relative; */
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  /* margin-right: 2%; */
-}
-
-/* .button-3:focus:not(:focus-visible):not(.focus-visible) {
-  box-shadow: none;
-  outline: none;
-}
-
-.button-3:hover {
-  background-color: #2c974b;
-}
-
-.button-3:focus {
-  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-  outline: none;
-}
-
-.button-3:disabled {
-  background-color: #94d3a2;
-  border-color: rgba(27, 31, 35, .1);
-  color: rgba(255, 255, 255, .8);
-  cursor: default;
-}
-
-.button-3:active {
-  background-color: #298e46;
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-} */
-
-
-/*
-.aboutcontainer{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  padding-bottom: 5rem;
-}
-
-.aboutcontainer>.image{
-  flex: 0 0 auto;
-}
-
-.aboutcontainer>.image>img{
-  display: block;
-  max-width: 100%;
-  max-height: 25rem;
-}
-
-.aboutcontainer>.text{
-  flex: 0 0 auto;
-  padding-right: 10vw;
-} */
 
 
 
@@ -717,33 +485,6 @@ body::after {
 
 
 
-
-
-
-
-
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsibleContent {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
 
 .footer {
   position:absolute;
@@ -752,7 +493,7 @@ body::after {
   font-family: sans-serif;
   bottom:0;
   width:100%;
-  height:100px;   /* Height of the footer */
+  height:100px;   /* inaltimea footer-ului */
   padding: 1rem 0.5rem;
   background:grey;
 }
@@ -765,9 +506,8 @@ body::after {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
-    min-height: 87.5vh;
-    /* align-content: center; */
+    min-height: 87.5vh; /* o sa incercam sa lucram cat mai putin cu vh si vw pe chestii scrollable;
+                           mai bine utilizam inaltimi exacte in pixeli ca site-ul sa nu o ia razna cand dam resize */
   }
 
   .container1>.image{
@@ -798,7 +538,6 @@ body::after {
     flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
   }
 
   .container2>.image{
@@ -840,7 +579,7 @@ body::after {
     background-color: blue;
   }
   .aboutcontainer>.image>img{
-    object-fit: scale-down;
+    object-fit: scale-down; /* se micsoreaza imaginea la resize; ne mai gandim daca lasam asa, dar nu e rau */
     /* width: 80%;
     max-height: 100%; */
     max-height: 100%;
