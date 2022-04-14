@@ -133,6 +133,91 @@ body::after {
 
 
 
+.introLogin{
+  min-height: 20vh;
+}
+
+
+
+.login{
+  /* padding-top: 30vh; */
+  /* height: 40vh; */
+  /* top: 30vh; */
+  height: 300px;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+ }
+
+.login>.loginform{
+  background-color: grey;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 5px;
+  /* filter: drop-shadow(1px 1px 1px black); */
+  box-shadow: 1px 1px;
+}
+
+.login .title{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  /* position: relative; */
+}
+
+/* .login .loginform .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+} */
+
+/* .login>.loginform>.user-details>.input-box{
+  display: block;
+} */
+
+.login .details{
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+
+.input-box input{
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.login .loginbutton{
+  /* padding-top: 5px; */
+  align-self: flex-end;
+}
+
+.loginbutton a{
+  /* display: block; */
+  /* margin-top: auto; */
+  /* justify-content: flex-end; */
+}
+
+.input-box span{
+  display:block;
+}
+.input-box input{
+}
+.input-box a{
+  display: block;
+}
+.loginbutton input{
+  margin-top: 35px;
+  display: block;
+}
 
 
 
@@ -141,6 +226,127 @@ body::after {
 
 
 
+
+
+
+
+
+
+
+
+.register{
+  /* padding-top: 30vh; */
+  /* height: 40vh; */
+  /* top: 30vh; */
+  height: 400px;
+  /* background-color: purple; */
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+ }
+
+.register>.registerform{
+  background-color: #FAF9F6;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 5px;
+  /* filter: drop-shadow(1px 1px 1px black); */
+  box-shadow: 1px 1px;
+}
+
+.registerform .title{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  /* position: relative; */
+}
+
+/* .login .loginform .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+} */
+
+/* .login>.loginform>.user-details>.input-box{
+  display: block;
+} */
+
+.registerform .details{
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  /* font-weight: 500; */
+  margin-bottom: 20px;
+}
+
+
+.input-box input{
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.registerform .registerbutton{
+  /* padding-top: 5px; */
+  align-self: flex-end;
+}
+
+.registerbutton a{
+  font-size: 12px;
+  font-family: 'Public Sans', sans-serif;
+  /* display: block; */
+  /* margin-top: auto; */
+  /* justify-content: flex-end; */
+}
+
+.input-box span{
+  display:block;
+}
+.input-box input{
+}
+.input-box a{
+  display: block;
+}
+.registerbutton input{
+  margin-top: 35px;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .container1{
   background-color: red;
   display: flex;
@@ -148,26 +354,162 @@ body::after {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.container1>.image{
-  flex: 0 0 auto;
-}
+/* .container1>.image{ */
+  /* object-fit: contain; */
+  /* flex: 0 0 auto;
+} */
 
-.container1>.image>img{
-  display: block;
-  max-width: 100%;
-  max-height: 30rem;
-}
+/* .container1>.image>img{
+  display: block; */
+  /* width: 55%;
+  max-height: 60%; */
+  /* height: 60vh;
+  object-fit: cover;
+} */
 
-.container1>.text{
+/* .container1>.text{
   flex: 0 0 auto;
   padding-right: 10vw;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.container1>.image {
+  grid-area: 1 / 1 / 4 / 7;
+  background-color: blue;
+}
+.container1>.image>img {
+  /* max-width: 100%; */
+  /* place-self: center; */
+  /* object-position: center; */
+  /* object-fit: contain; */
+  /* padding-left: 5rem; */
+  /* height: 40vh;
+  width: 40vw */
+  /* height: 80%; */
+  /* justify-content: flex-end; */
+  /* background-color: blue; */
+  object-fit: cover;
+  /* object-position: center; */
+  height: 400px;
+  width: 100%;
+  /* max-height: 100%; */
+}
+.container1>.text {
+  grid-area: 1 / 7 / 4 / 11;
+  width: 100%
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-self: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 25px;
+}
+.container1 .text .one{
+  background: red;
 }
 
 
 
-.container2{
+
+
+
+
+
+
+
+
+
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.container2>.image {
+  grid-area: 1 / 5 / 4 / 11;
+  background-color: blue;
+}
+.container2>.image>img {
+  /* max-width: 100%; */
+  /* place-self: center; */
+  /* object-position: center; */
+  /* object-fit: contain; */
+  /* padding-left: 5rem; */
+  /* height: 40vh;
+  width: 40vw */
+  /* height: 80%; */
+  /* justify-content: flex-end; */
+  /* background-color: blue; */
+  object-fit: cover;
+  /* object-position: center; */
+  height: 400px;
+  width: 100%;
+  /* max-height: 100%; */
+}
+.container2>.text {
+  grid-area: 1 / 1 / 4 / 5;
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container2{
   background-color: red;
   display: flex;
   flex-direction: row;
@@ -183,13 +525,33 @@ body::after {
 
 .container2>.image{
   flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .container2>.image>img{
   display: block;
   max-width: 100%;
   max-height: 30rem;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -414,7 +776,7 @@ body::after {
 
   .container1>.image>img{
     display: block;
-    height: 45vh;
+    height: 400px;
     object-fit: cover;
   }
 
@@ -423,6 +785,12 @@ body::after {
     padding: 20px;
     padding-bottom: 20vh;
   }
+
+
+
+
+
+
 
   .container2{
     background-color: red;
@@ -439,7 +807,7 @@ body::after {
 
   .container2>.image>img{
     display: block;
-    height: 45vh;
+    height: 400px;
     object-fit: cover;
   }
 
