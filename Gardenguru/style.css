@@ -18,7 +18,6 @@
   position: fixed;
   width: 100vw;
   background-color: white;
-  @font-family: Sora;
 }
 .nav__list {
   display: flex;
@@ -98,8 +97,6 @@ body{
   padding-bottom: 60px;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: #d8cba2;
 }
 
 body::after {
@@ -181,18 +178,11 @@ body::after {
   height: 25px;
   padding-left: 5px;
 }
-
 .login .loginbutton{
   align-self: flex-end;
 }
-
-.loginbutton a{
-}
-
 .input-box span{
   display:block;
-}
-.input-box input{
 }
 .input-box a{
   display: block;
@@ -201,18 +191,6 @@ body::after {
   margin-top: 35px;
   display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -268,8 +246,7 @@ body::after {
 .input-box span{
   display:block;
 }
-.input-box input{
-}
+
 .input-box a{
   display: block;
 }
@@ -328,7 +305,7 @@ body::after {
 }
 .container1>.text {
   grid-area: 1 / 7 / 4 / 11;
-  width: 100%
+  width: 100%;
   height: 100%;
   display: flex;
   align-self: center;
@@ -606,4 +583,195 @@ body::after {
     padding: 5px 5px;
     height:50px;
   }
+}
+
+/* stef */
+.underHeader {
+  background-image: url(images/leavesBackground.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+.messageUnderHeader {
+  font-size: 50px;
+  color: white;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid;
+  border-color: #cdcbcb3d;
+  padding: 15px;
+}
+
+.description_container{
+  background-image: url("images/backgroundImage2.jpg");
+  border-bottom: 5px solid #cdcbcb3d;
+}
+.description{
+  padding: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.aboutTitle{
+  color: #5aa53f;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.descriptionTitle{
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(26, 25, 25);
+  padding-bottom: 10px;
+}
+.descriptionItem{
+  border: 2px solid;
+  border-color: #cdcbcb3d;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+li {
+  list-style-type: none;
+  padding:5px 15px;
+  color: rgb(26, 25, 25);
+}
+.basics_contaner{
+    background-image: url("images/test2.jpg");
+}
+
+
+.mainContainerIndex{
+    background-image: url("images/backgroundImage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 0 #ffffff;
+    padding: 70px;
+    border-bottom: 5px solid #cdcbcb3d;
+
+}
+.containerIndexBasics{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.itemIndexBasics{
+  border: #d8cba2 solid 3px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.item1IndexBasics{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.imgBasics{
+  max-width:100%;
+  height:auto;
+}
+.titleIndexBasics{
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-top: #d8cba2 solid 2px;
+  font-size: 18px;
+
+}
+  
+#imgPaddingSoil{
+  padding-bottom: 10px;
+}
+.descriptionIndexBasics{
+  font-size: 15px;
+  color: #808080;
+  text-align: center;
+}
+.mainTitleIndex{
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.containerIndexCategories{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.titleIndexCategory{
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #808080;
+}
+.centerGrid{
+  display: grid;
+  justify-items: center;
+}
+.imgCategories{
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.imgCategories:hover {
+  opacity: 0.8;
+}
+a{
+  text-decoration: none;
+}
+.itemIndexBasics:hover{
+  opacity: 0.7;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+  .underHeader {
+    height: 350px;
+}
+.description {
+  grid-template-columns: 1fr;
+}
+.containerIndexCategories {
+  grid-template-columns: 1fr;
+}
+  .messageUnderHeader {
+  font-size: 35px;
+  color: white;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid;
+  border-color: #cdcbcb3d;
+  padding: 15px;
+}
+  .containerIndexBasics{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+
+  .containerIndexBasics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .containerIndexBasics{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+  }
+  .descriptionIndexBasics {
+    font-size: 19px;
+    color: #808080;
+    text-align: center;
+}
 }
