@@ -3,6 +3,8 @@
   src:url('Fonts(potentially)/swansea-font') format('truetype');
 }
 
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -14,50 +16,54 @@
 
 
 
-.nav {
+.header {
   position: fixed;
   width: 100vw;
-  background-color: white;
+  background-color: #d8cba2;
+  font-family: 'Public Sans', sans-serif;
 }
-.nav__list {
+.header a{
+  text-decoration: none;
+  color: black;
+}
+.headerlist {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1px;
   margin: 0 1rem;
 }
-.nav__listlogo {
+.headerlogo {
   list-style: none;
   font-weight: bold;
   margin-left: 0.8rem;
   margin-right: auto;
   cursor: pointer;
 }
-.nav__listitem {
+.headeritem {
   list-style: none;
   font-weight: bold;
   position: relative;
   padding: 1.5rem 1rem;
   cursor: pointer;
 }
-.nav__listitem::after {
+.headeritem::after {
   content: "";
   width: 0;
   height: 0.3rem;
 
   position: absolute;
-  left: 1rem;
+  left: 0.99rem;
   bottom: 0.8rem;
   background-color: #f06292;
 }
-.nav__listitem:hover::after, .nav__listitem:focus::after {
-  width: 80%;
+.headeritem:hover::after, .headeritem:focus::after {
+  width: 65%;
 }
-.nav__listitem:hover ul, .nav__listitem:focus ul {
+.headeritem:hover ul, .headeritem:focus ul {
   opacity: 1;
   visibility: visible;
 }
-.nav__listitemdrop {
+.headerdropdown {
   position: absolute;
   top: 4rem;
   left: -1rem;
@@ -70,11 +76,14 @@
   opacity: 0;
   visibility: hidden;
 }
-.nav__listitemdrop li {
+.headerdropdown li {
   list-style: none;
   padding: 0.5rem 1rem;
 }
-.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+.headerdropdown li:hover {
+  background-color: #fce4ec;
+}
+.headerdropdown li:focus {
   background-color: #fce4ec;
 }
 
@@ -93,16 +102,19 @@
 
 body{
   position: relative;
-  min-height: 100vh; /*ne ajuta sa tinem footer-ul la sfarsitul paginii, indiferent ca avem destul continut cat sa ocupam pagina sau nu*/
-  padding-bottom: 60px;
+  min-height: calc(100vh - 50px); /*ne ajuta sa tinem footer-ul la sfarsitul paginii, indiferent ca avem destul continut cat sa ocupam pagina sau nu*/
+  /* max-height: 100vh; */
+  /* padding-bottom: 60px; */
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  background-color: #FAF9F6;
 }
 
 body::after {
   content: '';
   display: block;
-  height: 125px; /* Set same as footer's height */
+  height: 200px; /* Set same as footer's height */
 }
 
 
@@ -126,6 +138,18 @@ body::after {
   width: 100%;
 }
 
+.accountIntro{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 50px); /* facem un slide introductiv care ocupa intreaga pagina */
+  align-items: center;
+  align-content: center;
+  background-image: url("/PIXNIO-221327-5472x3648.jpg"); /* intro pt. pagina de about*/
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
 
 .intro>.text{
   padding: 50px; /* header-ul e fixed; daca nu bag padding, o sa apara in spatele header-ului */
@@ -133,16 +157,33 @@ body::after {
   font-size: 12px;
 }
 
-
 .introLogin{
-  min-height: 20vh; /* padding partial pt. fereastra de login */
+  min-height: 150px; /* padding partial pt. fereastra de login */
+}
+
+.introRegister{
+  min-height: 100px; /* padding partial pt. fereastra de login */
+}
+
+.loginPadding{
+  min-height: 25px;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
 .login{
-  height: 300px;
-  background-color: purple;
+  height: 325px;
+  /* background-color: purple; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,53 +191,189 @@ body::after {
  }
 
 .login>.loginform{
-  background-color: grey;
-  padding: 1rem;
+  background-color: #FAF9F6;
+  padding: 2rem 1.25rem;
   height: 100%;
-  border-radius: 5px;
-  box-shadow: 1px 1px;
+  width: 300px;
+  border-radius: 10px;
+  /* filter: drop-shadow(1px 1px 1px black); */
+  box-shadow: 2px 2px;
 }
 
 .login .title{
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 20px;
+  padding-left: 0.1rem;
+  margin:auto;
+  margin-top: -6px;
+  margin-bottom: 26px;
+  /* position: relative; */
 }
 
 .login .details{
+  font-family: 'Public Sans', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  letter-spacing: 0.2px;
+  text-indent: 2px;
+  /* font-weight: 500; */
   margin-bottom: 20px;
 }
 
+.loginbutton input{
+  border: 3px solid;
+  background-color: black;
+  border-color: black;
+  color: white;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-left: 1px;
+  margin-bottom: 2px;
+  padding: 3px;
+  display: block;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.loginbutton input:hover{
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
+.loginbutton input:hover:focus{
+  background-color: red;
+  border-color: red;
+  color: black
+}
+.loginbutton input:active{
+
+}
+.loginbutton input:visited{
+
+}
+
+.login a{
+  font-size: 16px;
+  font-family: 'Public Sans', sans-serif;
+  text-decoration: none;
+  /* padding-left: 2px; */
+  transition: 250ms;
+  color: blue;
+}
+
+.loginbutton a{
+  font-size: 14px;
+}
+
+.login a:hover {
+  color: red;
+}
+
+.loginbutton a:hover {
+  color: orange;
+}
+
+.login a:active {
+  color: black;
+}
+
+.login a:visited {
+  color: blue;
+}
+
+.login a:visited:hover {
+  color: red;
+}
+
+.loginbutton a:visited:hover {
+  color: orange;
+}
+
+.login a:focus {
+  color: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .input-box input{
-  display: block; /* cu display: block pun div-urile pe linii noi */
+  margin-top: 2px;
+  display: block;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #f5f4f2;
   width: 100%;
   height: 25px;
-  padding-left: 5px;
+  padding: 13px 7px;
 }
-.login .loginbutton{
-  align-self: flex-end;
-}
+
 .input-box span{
   display:block;
 }
+
 .input-box a{
   display: block;
+  margin-top: 2px;
 }
-.loginbutton input{
-  margin-top: 35px;
-  display: block;
+
+.input-box input:hover {
+  transition: 150ms;
+  outline: none;
+  border-color: lightgreen;
+  opacity: 50%;
 }
+
+.input-box input:focus {
+  transition: 250ms;
+  outline: none;
+  border-color: green;
+  opacity: 100%;
+}
+
+.input-box input:valid{
+  transition: 250ms;
+  outline: none;
+  border-color: none;
+  opacity: 100%;
+}
+
+.input-box input:invalid{
+  transition: 250ms;
+  outline: none;
+  border-color: red;
+  opacity: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 .register{
-  height: 400px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,37 +382,63 @@ body::after {
 
 .register>.registerform{
   background-color: #FAF9F6;
-  padding: 1rem;
+  padding: 2rem 1.5rem;
   height: 100%;
-  border-radius: 5px;
-  box-shadow: 1px 1px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 2px 2px;
 }
 
 .registerform .title{
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 20px;
+  padding-left: 0.2rem;
+  margin:auto;
+  margin-top: -6px;
+  margin-bottom: 26px;
 }
 
 .registerform .details{
   font-family: 'Public Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
+  text-indent: 2px;
+  /* font-weight: 500; */
   margin-bottom: 20px;
 }
 
-
-.input-box input{
+.registerbutton input{
+  border: 5px solid;
+  background-color: black;
+  border-color: black;
+  color: white;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 25px;
+  margin-left: 1px;
+  margin-bottom: 2px;
+  padding: 3px;
   display: block;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
-  height: 25px;
-  padding-left: 5px;
+  transition: 250ms;
+  cursor: pointer;
 }
 
-.registerform .registerbutton{
-  align-self: flex-end;
+.registerbutton input:hover{
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
+.registerbutton input:hover:focus{
+  background-color: red;
+  border-color: red;
+  color: black
+}
+.registerbutton input:active{
+
+}
+.registerbutton input:visited{
+
 }
 
 .registerbutton a{
@@ -243,16 +446,31 @@ body::after {
   font-family: 'Public Sans', sans-serif;
 }
 
-.input-box span{
-  display:block;
+.register a{
+  text-decoration: none;
+  padding-left: 2px;
+  transition: 250ms;
+  color: blue;
 }
 
-.input-box a{
-  display: block;
+.register a:hover {
+  color: darkgreen;
 }
-.registerbutton input{
-  margin-top: 35px;
-  display: block;
+
+.register a:active {
+  color: black;
+}
+
+.register a:visited {
+  color: blue;
+}
+
+.register a:visited:hover {
+  color: darkgreen;
+}
+
+.register a:focus {
+  color: purple;
 }
 
 
@@ -305,7 +523,7 @@ body::after {
 }
 .container1>.text {
   grid-area: 1 / 7 / 4 / 11;
-  width: 100%;
+  width: 100%
   height: 100%;
   display: flex;
   align-self: center;
@@ -405,14 +623,14 @@ body::after {
 
 .aboutcontainer>.image {
   grid-area: 2 / 2 / 6 / 6;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .aboutcontainer>.image>img {
   object-fit: cover;
   width: 100%;
   height: 400px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .aboutcontainer>.name {
@@ -464,16 +682,138 @@ body::after {
 
 
 .footer {
-  position:absolute;
+  position: absolute;
   display: flex;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: 'Public Sans', sans-serif;
   bottom:0;
   width:100%;
-  height:100px;   /* inaltimea footer-ului */
+  height:200px;   /* inaltimea footer-ului */
   padding: 1rem 0.5rem;
-  background:grey;
+  background-color: #7c87a3;
 }
+
+.footer a{
+  text-decoration: none;
+  color: #002aa6;
+}
+
+.footer a:hover {
+  transition: 150ms;
+  opacity: 50%;
+}
+
+.footer a:visited {
+  transition: 150ms;
+  opacity: 50%;
+}
+
+.footer a:visited:hover {
+  transition: 150ms;
+  opacity: 50%;
+}
+
+.footerintro{
+  /* height: 50px; */
+  position: absolute;
+}
+
+.footerdescription{
+  margin-top: 55px;
+  display: flex;
+  /* position: absolute; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerdescription a{
+  color: purple;
+  margin-right: 5px;
+}
+.footerdescription a:visited{
+  color: purple;
+}
+
+.sendquestions{
+  margin-right: 2rem;
+}
+
+.footerinfo{
+  margin-left: 2rem;
+}
+
+.sendquestions span{
+  display: block;
+}
+
+.sendquestions textarea{
+  margin-top: 2px;
+  resize: none;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #f5f4f2;
+  width: 90%;
+  height: 45px;
+  padding: 5px 5px;
+}
+
+.sendquestions textarea:hover {
+  transition: 150ms;
+  outline: none;
+  border-color: lightgreen;
+  opacity: 50%;
+}
+
+.sendquestions textarea:focus {
+  transition: 250ms;
+  outline: none;
+  border-color: green;
+  opacity: 100%;
+}
+
+.sendquestions input{
+  border: 3px solid;
+  background-color: black;
+  border-color: black;
+  color: white;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 5px;
+  /* margin-left: 1px;
+  margin-bottom: 2px; */
+  padding: 3px;
+  display: block;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.sendquestions input:hover, input:visited:hover{
+  background-color: red;
+  border-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 800px) { /* poate fi si 800px pt landscape in telefoane */
 
@@ -544,16 +884,16 @@ body::after {
 
 
   .aboutcontainer {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
   .aboutcontainer>.image {
     grid-area: 2 / 2 / 6 / 6;
     justify-self: center;
-    background-color: blue;
+    /* background-color: blue; */
   }
   .aboutcontainer>.image>img{
     object-fit: scale-down; /* se micsoreaza imaginea la resize; ne mai gandim daca lasam asa, dar nu e rau */
@@ -564,26 +904,117 @@ body::after {
   }
   .aboutcontainer>.name{
     grid-area: 6 / 2 / 7 / 6;
-    background-color: red;
+    /* background-color: red; */
   }
   .aboutcontainer>.text {
     grid-area: 7 / 2 / 9 / 6;
-    background-color: orange;
+    /* background-color: orange; */
+    font-size: 15px;
+    padding: 0.5rem 0.5rem;
   }
   .aboutcontainer>.buttons {
     grid-area: 9 / 2 / 10 / 6;
     justify-self: center;
     justify-content: space-around;
-    background-color: green;
-  }
-
-
-
-  .footer {
-    padding: 5px 5px;
-    height:50px;
+    /* background-color: green; */
   }
 }
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .headerlogo {
+    margin-left: 0.1rem;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  .headeritem{
+    padding: 1.5rem 0.5rem;
+  }
+
+  .headeritem::after {
+    content: "";
+    width: 0;
+    height: 0.3rem;
+
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.8rem;
+    background-color: #f06292;
+  }
+
+  .headeritem:hover::after, .headeritem:focus::after {
+    width: 75%;
+  }
+
+  body::after{
+    height: 300px;
+  }
+
+  .footer{
+    padding: .5rem;
+    height: 300px;
+  }
+
+  .footerintro{
+    text-align: center;
+  }
+
+
+
+
+
+
+
+  .footerdescription {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Public Sans', sans-serif;
+    bottom:0;
+    width:100%;
+    height:250px;   /* inaltimea footer-ului */
+    margin-top: 25px;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+
+  }
+
+  .footerdescription a{
+    color: purple;
+    margin-right: 5px;
+  }
+  .footerdescription a:visited{
+    color: purple;
+  }
+
+  .sendquestions{
+    margin-right: 0rem;
+    /* padding-left: 10px; */
+  }
+
+  .footerinfo{
+    margin-left: 0rem;
+    padding-right: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* stef */
 .underHeader {
