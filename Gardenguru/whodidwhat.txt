@@ -1,0 +1,6 @@
+Header - Andrei + Gabriel
+Index - Stefania
+Footer - Andrei + Gabriel
+Login/Register - Gabriel
+About - Andrei
+Diagram, Documentation, Backend Prototype - All 3

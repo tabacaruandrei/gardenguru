@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <header>
+        <h1>
+            GardenGuru - Prototip Backend
+        </h1>
+    </header>
+        <body>
+            <h2>
+            </h2>
+            <h2>
+                1. Introducere
+            </h2>
+            <h3 style="font-weight:100">
+              GardenGuru este o pagina Web ce ofera un mediu de invatare si testare atat celor care ating uneltele de gradinarit pentru prima data cat si celor care deja se pricep la intretinerea propriilor gradini.
+
+              Totodata site-ul tine evidenta scorurilor obtinute in urma chestionarelor, iar scorurile cele mai mari sunt evidentiate in topul utilizatorilor.
+
+              Utilizand doar HTML si CSS, putem crea, dupa mult efort si concentrare, un site responsive, cu un set limitat de animatii si functionalitati.
+
+              Astfel, apare necesitatea crearii unei parti back-end a site-ului, ce va fi scrisa in JavaScript, si care va utiliza o baza de date scrisa, cel mai probabil, in Oracle.
+            </h3>
+            <h2>
+                2. General
+            </h2>
+            <h3 style="font-weight:100">
+              Ca o scurta mentiune, pentru toate paginile, backend-ul va fi folosit pentru aplicarea de animatii(fade-in pe scroll de exemplu) si elemente ce nu au o implementare deja facuta in HTML si CSS.
+
+              Aceste chestii nu vor mai fi mentionate inca o data in definirea comunicarii cu backend-ul a celorlalte pagini.
+            </h3>
+            <h2>
+                3. Footer
+            </h2>
+            <h3 style="font-weight:100">
+                In footer, vom comunica cu backend-ul prin partea de sugerat idei. Ideile se vor trimite direct, fara raspuns, pentru a ne ajuta sa imbunatatim site-ul.
+            </h3>
+            <h2>
+                4. Login
+            </h2>
+            <h3 style="font-weight:100">
+              In formularul de login, vom comunica cu backend-ul prin validarea datelor de logare.
+
+              Datele vor fi verificate in concordanta cu datele stocate in baza de date; daca sunt valide, se va efectua logarea utilizatorului, daca nu sunt valide, formularul va anunta utilizatorul ca a introdus un set de date gresite(nu vom specifica CARE dintre date au fost gresite, astfel incat sa nu facem spargerile de securitate mai usoare).
+            </h3>
+            <h2>
+                5. Register
+            </h2>
+            <h3 style="font-weight:100">
+              In formularul de register, vom comunica cu backend-ul prin validarea datelor de inregistrare.
+
+              Nickname-ul va trebui sa aiba o lungime corespunzatoare(intre x si y litere)si sa nu contina simboluri interzise(" ", de exemplu).
+
+              Numele si prenumele vor trebui sa fie valide(sa inceapa cu majuscula si sa nu contina alte simboluri in afara de literele alfabetului).
+
+              Adresa de e-mail va trebui sa fie scrisa in mod corect(nume@adresa.regiune).
+
+              Parola va trebui sa aiba o lungime corespunzatoare, sa nu contina simboluri interzise, sa contina anumite caractere(o cifra, o litera mare, o litera mica, un simbol ASCII anume), pentru a ne asigura ca utilizatorii isi aleg o parola sigura, ce nu poate fi sparta in mod usor, si va fi stocata in baza de date transformata in standardul SHA, ducand la o securizare mai puternica a platformei noastre.
+            </h3>
+            <h2>
+                6. Comunicarea cu backend-ul
+            </h2>
+            <h3 style="font-weight:100">
+              Pentru a comunica cu partea de backend a site-ului, va trebui sa dam id-uri unice fiecarui element din care vrem sa extragem date sau pe care vrem sa il prelucram. Sa exemplificam un model de comunicare intre frontend si backend in formularul de inregistrare.
+
+              Fiecare textbox din formularul de register(sub Enter your nickname, name, e-mail address etc.) va primi un id unic.
+
+              Vom stoca informatiile din fiecare textbox in functie de id in mai multe variabile create in partea de backend a codului. Vom verifica conditiile de validare pentru fiecare textbox in parte(de ex., pentru parole, vom verifica daca au un numar de litere adecvat, contin caractere speciale si nu au simboluri interzise).
+
+              Odata ce fiecare textbox a fost validat si nu avem niciun textbox cu input gresit, apasam butonul de register si incepem comunicarea cu baza de date a site-ului.
+
+              Vom valida mai intai unicitatea datelor introduse: daca nickname-ul, e-mail-ul si parola au fost introduse pentru prima data in baza de date si nu exista duplicate. Odata ce aceasta validare s-a realizat, contul se va salva in baza de date cu datele aferente plus parola securizata in standard SHA. Daca toti acesti pasi au fost realizati in mod corect, utilizatorul va primi o confirmare ca s-a inregistrat cu succes pe site-ul nostru, se va loga in contul sau nou creat si va putea sa experimenteze functionalitatile platformei dedicate user-ilor nostri.
+
+              Pe viitor, vom incerca sa introducem si o verificare prin e-mail a contului, daca vom reusi acest lucru, si astfel ar fi adaugata inca o coloana in baza de date dedicata validarii contului.
+            </h3>
+            <h2>
+                7. Stocarea de date
+            </h2>
+            <h3 style="font-weight:100">
+              Cum am mentionat anterior, vom utiliza Oracle pentru a stoca datele utilizatorilor.
+
+              Baza de date va contine:
+              - un tabel cu informatiile confidentiale ale tuturor utilizatorilor, utilizat pentru log-in si register
+              - un tabel cu informatiile legate de site ale tuturor utilizatorilor, utilizat in learn, exercise si top, precum: scorul total al utilizatorilor, date despre numarul de module completate de acestia, numarul de zile consecutive in care s-a logat utilizatorul respectiv etc.
+            </h3>
+
+        </body>
+</html>

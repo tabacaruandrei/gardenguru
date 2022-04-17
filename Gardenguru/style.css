@@ -1,10 +1,3 @@
-@font-face {
-  font-family: Swansea;
-  src:url('Fonts(potentially)/swansea-font') format('truetype');
-}
-
-
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -19,8 +12,10 @@
 .header {
   position: fixed;
   width: 100vw;
-  background-color: #d8cba2;
   font-family: 'Public Sans', sans-serif;
+  background-color: #d8cba2;
+  border-bottom: 1px solid rgba(82, 75, 55, 0.7);
+  z-index: 1;
 }
 .header a{
   text-decoration: none;
@@ -35,9 +30,17 @@
 .headerlogo {
   list-style: none;
   font-weight: bold;
-  margin-left: 0.8rem;
+  margin-left: 0.5rem;
   margin-right: auto;
   cursor: pointer;
+}
+.headerlogo:hover{
+  transition: 250ms;
+  opacity: 0.5;
+}
+.headerlogo:focus {
+  transition: 250ms;
+  opacity: 0.5;
 }
 .headeritem {
   list-style: none;
@@ -54,9 +57,10 @@
   position: absolute;
   left: 0.99rem;
   bottom: 0.8rem;
-  background-color: #f06292;
+  background-color: rgba(0, 117, 94, 0.7);;
 }
 .headeritem:hover::after, .headeritem:focus::after {
+  transition: width 100ms;
   width: 65%;
 }
 .headeritem:hover ul, .headeritem:focus ul {
@@ -65,15 +69,17 @@
 }
 .headerdropdown {
   position: absolute;
-  top: 4rem;
-  left: -1rem;
-  background-color: white;
-  width: 12rem;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  top: calc(4rem + 2px);
+  left: -1rem;
+  width: 10rem;
+  padding: 1rem;
   gap: 0.5rem;
   opacity: 0;
+  background-color: #d8cba2;
+  border: 1px solid rgba(82, 75, 55, 0.5);
+  border-top: 0px;
   visibility: hidden;
 }
 .headerdropdown li {
@@ -81,10 +87,12 @@
   padding: 0.5rem 1rem;
 }
 .headerdropdown li:hover {
-  background-color: #fce4ec;
+  transition: background-color 200ms;
+  background-color: rgba(0, 117, 94, 0.5);
 }
 .headerdropdown li:focus {
-  background-color: #fce4ec;
+  transition: background-color 200ms;
+  background-color: rgba(0, 117, 94, 0.5);
 }
 
 
@@ -114,7 +122,7 @@ body{
 body::after {
   content: '';
   display: block;
-  height: 200px; /* Set same as footer's height */
+  height: 350px; /* Set same as footer's height */
 }
 
 
@@ -131,7 +139,7 @@ body::after {
 }
 
 .about{
-  background-image: url("/PIXNIO-221327-5472x3648.jpg"); /* intro pt. pagina de about*/
+  background-image: url("/images/background3.png"); /* intro pt. pagina de about*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -144,7 +152,7 @@ body::after {
   min-height: calc(100vh - 50px); /* facem un slide introductiv care ocupa intreaga pagina */
   align-items: center;
   align-content: center;
-  background-image: url("/PIXNIO-221327-5472x3648.jpg"); /* intro pt. pagina de about*/
+  background-image: url("/images/background1.png"); /* intro pt. pagina de about*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -182,8 +190,8 @@ body::after {
 
 
 .login{
-  height: 325px;
-  /* background-color: purple; */
+  min-height: 325px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,22 +203,22 @@ body::after {
   padding: 2rem 1.25rem;
   height: 100%;
   width: 300px;
+  /* width: 70vw; */
+  min-width: 300px;
   border-radius: 10px;
-  /* filter: drop-shadow(1px 1px 1px black); */
   box-shadow: 2px 2px;
 }
 
-.login .title{
+.loginform .title{
   font-size: 25px;
   font-weight: 600;
   padding-left: 0.1rem;
   margin:auto;
   margin-top: -6px;
   margin-bottom: 26px;
-  /* position: relative; */
 }
 
-.login .details{
+.loginform .details{
   font-family: 'Public Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 0.2px;
@@ -237,27 +245,20 @@ body::after {
 }
 
 .loginbutton input:hover{
-  background-color: blue;
-  border-color: blue;
-  color: white;
+  background-color: #d8cba2;
+  border-color: #d8cba2;
+  color: black;
 }
 .loginbutton input:hover:focus{
   background-color: red;
   border-color: red;
-  color: black
-}
-.loginbutton input:active{
-
-}
-.loginbutton input:visited{
-
+  color: black;
 }
 
-.login a{
+.loginform a{
   font-size: 16px;
   font-family: 'Public Sans', sans-serif;
   text-decoration: none;
-  /* padding-left: 2px; */
   transition: 250ms;
   color: blue;
 }
@@ -266,7 +267,7 @@ body::after {
   font-size: 14px;
 }
 
-.login a:hover {
+.loginform a:hover {
   color: red;
 }
 
@@ -274,15 +275,15 @@ body::after {
   color: orange;
 }
 
-.login a:active {
+.loginform a:active {
   color: black;
 }
 
-.login a:visited {
+.loginform a:visited {
   color: blue;
 }
 
-.login a:visited:hover {
+.loginform a:visited:hover {
   color: red;
 }
 
@@ -290,7 +291,7 @@ body::after {
   color: orange;
 }
 
-.login a:focus {
+.loginform a:focus {
   color: purple;
 }
 
@@ -380,7 +381,7 @@ body::after {
   align-items: center;
  }
 
-.register>.registerform{
+.register>.loginform{
   background-color: #FAF9F6;
   padding: 2rem 1.5rem;
   height: 100%;
@@ -389,89 +390,6 @@ body::after {
   box-shadow: 2px 2px;
 }
 
-.registerform .title{
-  font-size: 25px;
-  font-weight: 600;
-  padding-left: 0.2rem;
-  margin:auto;
-  margin-top: -6px;
-  margin-bottom: 26px;
-}
-
-.registerform .details{
-  font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.2px;
-  text-indent: 2px;
-  /* font-weight: 500; */
-  margin-bottom: 20px;
-}
-
-.registerbutton input{
-  border: 5px solid;
-  background-color: black;
-  border-color: black;
-  color: white;
-  font-family: 'Public Sans', sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  margin-top: 25px;
-  margin-left: 1px;
-  margin-bottom: 2px;
-  padding: 3px;
-  display: block;
-  transition: 250ms;
-  cursor: pointer;
-}
-
-.registerbutton input:hover{
-  background-color: blue;
-  border-color: blue;
-  color: white;
-}
-.registerbutton input:hover:focus{
-  background-color: red;
-  border-color: red;
-  color: black
-}
-.registerbutton input:active{
-
-}
-.registerbutton input:visited{
-
-}
-
-.registerbutton a{
-  font-size: 12px;
-  font-family: 'Public Sans', sans-serif;
-}
-
-.register a{
-  text-decoration: none;
-  padding-left: 2px;
-  transition: 250ms;
-  color: blue;
-}
-
-.register a:hover {
-  color: darkgreen;
-}
-
-.register a:active {
-  color: black;
-}
-
-.register a:visited {
-  color: blue;
-}
-
-.register a:visited:hover {
-  color: darkgreen;
-}
-
-.register a:focus {
-  color: purple;
-}
 
 
 
@@ -494,80 +412,6 @@ body::after {
 
 
 
-
-
-
-
-
-
-
-
-
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr); /* asta e facuta pe grid generator;
-                                             nu stiu exact ce reprezinta fiecare linie da nu prea e important
-                                          */
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-.container1>.image {
-  grid-area: 1 / 1 / 4 / 7;
-  background-color: blue;
-}
-.container1>.image>img {
-  object-fit: cover; /* imaginea va fi crop-ata astfel incat sa ocupe tot grid item-ul in care se afla */
-  height: 400px;
-  width: 100%;
-}
-.container1>.text {
-  grid-area: 1 / 7 / 4 / 11;
-  width: 100%
-  height: 100%;
-  display: flex;
-  align-self: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 25px;
-}
-.container1 .text .one{
-  background: red;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-.container2>.image {
-  grid-area: 1 / 5 / 4 / 11;
-  background-color: blue;
-}
-.container2>.image>img {
-  object-fit: cover;
-  height: 400px;
-  width: 100%;
-}
-.container2>.text {
-  grid-area: 1 / 1 / 4 / 5;
-  background-color: red;
-}
 
 
 
@@ -623,14 +467,12 @@ body::after {
 
 .aboutcontainer>.image {
   grid-area: 2 / 2 / 6 / 6;
-  /* background-color: blue; */
 }
 
 .aboutcontainer>.image>img {
   object-fit: cover;
   width: 100%;
   height: 400px;
-  /* background-color: blue; */
 }
 
 .aboutcontainer>.name {
@@ -639,16 +481,16 @@ body::after {
   font-weight: 700;
   align-self: center;
   padding: 1rem;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .aboutcontainer>.text {
   grid-area: 3 / 6 / 5 / 10;
   background-color: orange;
-  padding: 2rem 1rem;
+  padding: 1.25rem 1rem;
   padding-right: 2%;
   font-family: 'Public Sans', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .aboutcontainer>.buttons {
@@ -660,6 +502,14 @@ body::after {
 .aboutcontainer>.buttons a{
   transition: 250ms;
   padding-right: 20px;
+}
+
+.aboutcontainer>.buttons a:link{
+  color: purple;
+}
+
+.aboutcontainer>.buttons a:visited{
+  color: purple;
 }
 
 .aboutcontainer>.buttons a:hover {
@@ -688,7 +538,7 @@ body::after {
   font-family: 'Public Sans', sans-serif;
   bottom:0;
   width:100%;
-  height:200px;   /* inaltimea footer-ului */
+  height:350px;   /* inaltimea footer-ului */
   padding: 1rem 0.5rem;
   background-color: #7c87a3;
 }
@@ -714,14 +564,27 @@ body::after {
 }
 
 .footerintro{
-  /* height: 50px; */
+  height: 50px;
   position: absolute;
 }
 
-.footerdescription{
-  margin-top: 55px;
+.footerabout{
+  margin-top: 50px;
   display: flex;
-  /* position: absolute; */
+  text-align: center;
+  padding: 1rem 20vw;
+  position: absolute;
+}
+
+.footerabout span{
+  display: block;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 600;
+}
+
+.footerdescription{
+  margin-top: 135px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -780,8 +643,6 @@ body::after {
   font-weight: 500;
   font-size: 14px;
   margin-top: 5px;
-  /* margin-left: 1px;
-  margin-bottom: 2px; */
   padding: 3px;
   display: block;
   cursor: pointer;
@@ -816,73 +677,6 @@ body::after {
 
 
 @media only screen and (max-width: 800px) { /* poate fi si 800px pt landscape in telefoane */
-
-  .container1{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-height: 87.5vh; /* o sa incercam sa lucram cat mai putin cu vh si vw pe chestii scrollable;
-                           mai bine utilizam inaltimi exacte in pixeli ca site-ul sa nu o ia razna cand dam resize */
-  }
-
-  .container1>.image{
-    flex: 0 0 75%;
-  }
-
-  .container1>.image>img{
-    display: block;
-    height: 400px;
-    object-fit: cover;
-  }
-
-  .container1>.text{
-    flex: 0 0 20%;
-    padding: 20px;
-    padding-bottom: 20vh;
-  }
-
-
-
-
-
-
-
-  .container2{
-    background-color: red;
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .container2>.image{
-    flex: 0 0 60%;
-  }
-
-  .container2>.image>img{
-    display: block;
-    height: 400px;
-    object-fit: cover;
-  }
-
-  .container2>.text{
-    flex: 0 0 35%;
-    padding: 20px;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-  }
-
-
-
-
-
-
-
-
-
-
   .aboutcontainer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -893,30 +687,31 @@ body::after {
   .aboutcontainer>.image {
     grid-area: 2 / 2 / 6 / 6;
     justify-self: center;
-    /* background-color: blue; */
   }
   .aboutcontainer>.image>img{
     object-fit: scale-down; /* se micsoreaza imaginea la resize; ne mai gandim daca lasam asa, dar nu e rau */
-    /* width: 80%;
-    max-height: 100%; */
     max-height: 100%;
     width: 100%;
   }
   .aboutcontainer>.name{
     grid-area: 6 / 2 / 7 / 6;
-    /* background-color: red; */
   }
   .aboutcontainer>.text {
     grid-area: 7 / 2 / 9 / 6;
-    /* background-color: orange; */
-    font-size: 15px;
-    padding: 0.5rem 0.5rem;
+    font-size: 20px;
+    padding: 1rem 1rem;
   }
   .aboutcontainer>.buttons {
     grid-area: 9 / 2 / 10 / 6;
     justify-self: center;
     justify-content: space-around;
-    /* background-color: green; */
+  }
+  .footerabout{
+    padding: 1rem 10vw;
+  }
+
+  .footerdescription{
+    margin-top: 175px;
   }
 }
 
@@ -950,23 +745,24 @@ body::after {
   }
 
   body::after{
-    height: 300px;
+    height: 375px;
+  }
+
+  .aboutcontainer>.text {
+    grid-area: 7 / 2 / 9 / 6;
+    font-size: 18px;
+    padding: 0.5rem 0.5rem;
   }
 
   .footer{
     padding: .5rem;
-    height: 300px;
+    height: 375px;
   }
 
   .footerintro{
     text-align: center;
+    padding: 0 0.25rem;
   }
-
-
-
-
-
-
 
   .footerdescription {
     position: absolute;
@@ -977,11 +773,9 @@ body::after {
     font-family: 'Public Sans', sans-serif;
     bottom:0;
     width:100%;
-    height:250px;   /* inaltimea footer-ului */
-    margin-top: 25px;
-    padding-top: 0.5rem;
+    height:150px;
     padding-left: 1rem;
-
+    margin-bottom: 1rem;
   }
 
   .footerdescription a{
@@ -994,7 +788,6 @@ body::after {
 
   .sendquestions{
     margin-right: 0rem;
-    /* padding-left: 10px; */
   }
 
   .footerinfo{
@@ -1002,6 +795,40 @@ body::after {
     padding-right: 15px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .aboutcontainer>.text {
+    font-size: 15px;
+  }
+
+  body::after{
+    height: 425px;
+  }
+
+  .footer{
+    height: 425px;
+  }
+
+  .footerabout{
+    padding: 1rem 5vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1025,6 +852,7 @@ body::after {
   display: grid;
 }
 .messageUnderHeader {
+  font-family: 'Public Sans', sans-serif;
   font-size: 50px;
   color: white;
   align-self: center;
@@ -1046,10 +874,12 @@ body::after {
 }
 .aboutTitle{
   color: #5aa53f;
+  font-family: 'Public Sans', sans-serif;
   font-size: 15px;
   padding-bottom: 10px;
 }
 .descriptionTitle{
+  font-family: 'Public Sans', sans-serif;
   font-weight: bold;
   font-size: 30px;
   color: rgb(26, 25, 25);
@@ -1068,17 +898,17 @@ li {
   color: rgb(26, 25, 25);
 }
 .basics_contaner{
-    background-image: url("images/test2.jpg");
+  background-image: url("images/test2.jpg");
 }
 
 
 .mainContainerIndex{
-    background-image: url("images/backgroundImage2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 0 0 0 #ffffff;
-    padding: 70px;
-    border-bottom: 5px solid #cdcbcb3d;
+  background-image: url("images/backgroundImage2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 0 #ffffff;
+  padding: 70px;
+  border-bottom: 5px solid #cdcbcb3d;
 
 }
 .containerIndexBasics{
@@ -1108,19 +938,21 @@ li {
   text-align: center;
   padding: 20px;
   border-top: #d8cba2 solid 2px;
+  font-family: 'Public Sans', sans-serif;
   font-size: 18px;
-
 }
-  
+
 #imgPaddingSoil{
   padding-bottom: 10px;
 }
 .descriptionIndexBasics{
+  font-family: 'Public Sans', sans-serif;
   font-size: 15px;
   color: #808080;
   text-align: center;
 }
 .mainTitleIndex{
+  font-family: 'Public Sans', sans-serif;
   font-size: 24px;
   font-weight: bold;
   padding-bottom: 50px;
@@ -1132,6 +964,7 @@ li {
   grid-gap: 10px;
 }
 .titleIndexCategory{
+  font-family: 'Public Sans', sans-serif;
   font-weight: bold;
   text-align: center;
   padding: 20px;
@@ -1150,11 +983,11 @@ li {
 .imgCategories:hover {
   opacity: 0.8;
 }
-a{
-  text-decoration: none;
-}
 .itemIndexBasics:hover{
   opacity: 0.7;
+}
+a{
+  text-decoration: none;
 }
 
 
@@ -1204,5 +1037,5 @@ a{
     font-size: 19px;
     color: #808080;
     text-align: center;
-}
+ }
 }
