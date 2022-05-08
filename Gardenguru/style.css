@@ -42,6 +42,9 @@
   transition: 250ms;
   opacity: 0.5;
 }
+.headeritem::after{
+  transition: width 150ms;
+}
 .headeritem {
   list-style: none;
   font-weight: bold;
@@ -50,21 +53,21 @@
   cursor: pointer;
 }
 .headeritem::after {
+  position: absolute;
   content: "";
   width: 0;
   height: 0.3rem;
 
-  position: absolute;
   left: 0.99rem;
   bottom: 0.8rem;
   background-color: rgba(0, 117, 94, 0.7);;
 }
 .headeritem:hover::after, .headeritem:focus::after {
-  transition: width 100ms;
   width: 65%;
 }
 .headeritem:hover ul, .headeritem:focus ul {
   opacity: 1;
+  transition: opacity 150ms ease-in;
   visibility: visible;
 }
 .headerdropdown {
@@ -144,6 +147,17 @@ body::after {
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
+}
+
+.from-top{
+  transform: translateY(-10%);
+  opacity: 0.2;
+}
+
+.from-top.appear{
+  transform: translateY(0%);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+  opacity: 1;
 }
 
 .accountIntro{
@@ -523,7 +537,23 @@ body::after {
 
 
 
+.from-left{
+  transform: translateX(-10%);
+}
 
+.from-right{
+  transform: translateX(10%);
+}
+
+.from-left, .from-right{
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear, .from-right.appear{
+  transform: translateX(0);
+  opacity: 1;
+}
 
 
 
@@ -706,6 +736,20 @@ body::after {
     justify-self: center;
     justify-content: space-around;
   }
+  
+  .from-left{
+    transform: translateY(-10%);
+  }
+  
+  .from-right{
+    transform: translateY(-10%);
+  }
+  
+  .from-left.appear, .from-right.appear{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
   .footerabout{
     padding: 1rem 10vw;
   }
