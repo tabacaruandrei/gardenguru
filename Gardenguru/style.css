@@ -991,51 +991,223 @@ a{
 }
 
 
+.MP_container {
+  /* width: 100vw; */
+  height: 100vh;
 
 
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  padding-top: 76px;
+  box-sizing: border-box;
+}
+
+.MP_container>.div_cell {
+  border: 2px solid;
+  border-color: #cdcbcb3d;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.UserCard {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: center;
+}
+
+.UserCard>.Username {
+  font-size: 30px;
+  margin: 12px;
+}
+
+.UserCard>.Description {
+  font-size: 20px;
+
+}
+
+.UserCard img {
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.AccountDetails {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  text-align: left;
+  padding: 20px;
+}
+
+.RecentScores {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.Buttons {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.Buttons>.Button {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+  border: 5px solid;
+  border-color: #cdcbcb3d;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.AD_rows div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.AD_fieldName {
+  font-weight: bold;
+}
+
+.AD_fieldContent {}
+
+.RS_rows div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.RS_fieldName {
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 700px) {
   .underHeader {
     height: 350px;
-}
-.description {
-  grid-template-columns: 1fr;
-}
-.containerIndexCategories {
-  grid-template-columns: 1fr;
-}
+  }
+
+  .description {
+    grid-template-columns: 1fr;
+  }
+
+  .containerIndexCategories {
+    grid-template-columns: 1fr;
+  }
+
   .messageUnderHeader {
-  font-size: 35px;
-  color: white;
-  align-self: center;
-  justify-self: center;
-  border: 2px solid;
-  border-color: #cdcbcb3d;
-  padding: 15px;
-}
-  .containerIndexBasics{
+    font-size: 35px;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    border: 2px solid;
+    border-color: #cdcbcb3d;
+    padding: 15px;
+  }
+
+  .containerIndexBasics {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 40px;
   }
+
+
 }
+
+@media only screen and (max-width: 850px) {
+  .MP_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 370px 450px 450px 250px;
+
+  }
+
+  .UserCard {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+  }
+
+  .UserCard img {
+    width: 130px;
+  }
+
+  .AccountDetails {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .RecentScores {
+    grid-column: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .empty {
+    grid-column: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+  }
+}
+
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
 
-  .containerIndexBasics{
+  .containerIndexBasics {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
   }
 }
+
 @media only screen and (min-width: 1200px) {
-  .containerIndexBasics{
+  .containerIndexBasics {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 25px;
   }
+
   .descriptionIndexBasics {
     font-size: 19px;
     color: #808080;
     text-align: center;
- }
+  }
+
+}
+
+@media only screen and (max-width: 1110px) {
+  .UserCard>.Username {
+    font-size: 25px;
+    margin: 15px;
+  }
+
+  .UserCard>.Description {
+    font-size: 17px;
+
+  }
+
+  .UserCard img {
+    width: 130px;
+  }
 }
