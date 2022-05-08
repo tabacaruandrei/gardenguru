@@ -100,27 +100,33 @@
           <div class="user-details">
             <div class="input-box">
               <span class="details">Username:<span>
-              <input type="text" name="" value="" placeholder="Enter your username:" required>
+              <input id="user" type="text" name="" value="" placeholder="Enter your username:" required maxlength="16">
+              <span id="usererror"></span>
             </div>
             <div class="input-box">
               <span class="details">First name:<span>
-              <input type="text" name="" value="" placeholder="Enter your given name:" required>
+              <input id="firstname" type="text" name="" value="" placeholder="Enter your given name:" required>
+              <span id="firstnameerror"></span>
             </div>
             <div class="input-box">
               <span class="details">Last name:<span>
-              <input type="text" name="" value="" placeholder="Enter your family name:" required>
+              <input id="lastname" type="text" name="" value="" placeholder="Enter your family name:" required>
+              <span id="lastnameerror"></span>
             </div>
             <div class="input-box">
               <span class="details">Email address:<span>
-              <input type="email" name="" value="" placeholder="Enter your email address:" required>
+              <input id="email" type="email" name="" value="" placeholder="Enter your email address:" required>
+              <span id="emailerror"></span>
             </div>
             <div class="input-box">
               <span class="details">Password:<span>
-              <input type="password" name="" value="" placeholder="Enter your password:" required>
+              <input id="password" type="password" name="" value="" placeholder="Enter your password:" required maxlength="30">
+              <span id="pwerror"></span>
             </div>
             <div class="input-box">
               <span class="details">Confirm password:<span>
-              <input type="password" name="" value="" placeholder="Confirm your password:" required>
+              <input id="verifypassword" type="password" name="" value="" placeholder="Confirm your password:" required maxlength="30">
+              <span id="verifypwerror"></span>
             </div>
           </div>
           <div class="loginbutton">
@@ -168,5 +174,6 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="scriptfile.js"></script>
   </body>
 </html>

@@ -91,53 +91,53 @@
     </header>
 
 
-    <div class="intro about">
+    <div class="intro about from-top fade-in">
       <div class="text">
         <h1>Meet the team.</h1>
       </div>
     </div>
 
     <div class="aboutcontainer">
-      <div class="image">
+      <div class="image slide-in from-left">
         <img src="/images/andrei.png">
       </div>
-      <div class="name">
+      <div class="name slide-in from-right">
         <span class="aboutinfo">Tabacaru Andrei</span>
       </div>
-      <div class="text">
+      <div class="text slide-in from-right">
         <span class="aboutinfo">Aspiring web developer with a passion for photography and music.</span>
       </div>
-      <div class="buttons">
+      <div class="buttons button-slide from-right">
         <a href="https://github.com/tabacaruandrei"><i style="font-size:60px" class="fa">&#xf09b;</i></a>
       </div>
     </div>
 
     <div class="aboutcontainer">
-      <div class="image">
+      <div class="image slide-in from-left">
         <img src="/images/gabriel.png">
       </div>
-      <div class="name">
+      <div class="name slide-in from-right">
         <span class="aboutinfo">Ardeleanu Gabriel</span>
       </div>
-      <div class="text">
+      <div class="text slide-in from-right">
         <span class="aboutinfo">Passionate game developer, eager to learn and create projects I'm proud of.</span>
       </div>
-      <div class="buttons">
+      <div class="buttons button-slide from-right">
         <a href="https://github.com/ArdeleanuGabriel"><i style="font-size:60px" class="fa">&#xf09b;</i></a>
       </div>
     </div>
 
     <div class="aboutcontainer">
-      <div class="image">
+      <div class="image slide-in from-left">
         <img src="/images/stefania.png">
       </div>
-      <div class="name">
+      <div class="name slide-in from-right">
         <span class="aboutinfo">Sandu Stefania</span>
       </div>
-      <div class="text">
+      <div class="text slide-in from-right">
         <span class="aboutinfo">Courageous student seeking opportunities and chances to improve my knowledge and become better.</span>
       </div>
-      <div class="buttons">
+      <div class="buttons button-slide from-right">
         <a href="https://github.com/sandustefania"><i style="font-size:60px" class="fa">&#xf09b;</i></a>
       </div>
     </div>
@@ -167,9 +167,12 @@
           <span id="descriptionFooter">
           <a href="https://github.com/tabacaruandrei"><i style="font-size:40px" class="fa">&#xf09b;</i></a>
           </span>
-          <span id="footercopyright">&copy 2022</span> <!-- aici vom folosi php pentru a scrie un script de auto update al anului de copyright -->
+          <span id="footercopyright">&copy <span id="footeryear"></p> </span>
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="scriptfile.js"></script>
+    <script type="text/javascript" src="about_onload.js"></script>
+    <script type="text/javascript" src="about_slidein.js"></script>
   </body>
 </html>
