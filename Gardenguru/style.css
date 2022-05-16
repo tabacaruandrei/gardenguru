@@ -706,6 +706,7 @@ body::after {
 
 
 
+
 @media only screen and (max-width: 800px) { /* poate fi si 800px pt landscape in telefoane */
   .aboutcontainer {
     display: grid;
@@ -1043,8 +1044,8 @@ a{
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 10px;
+  
+  gap: 20px;
   padding: 10px;
   padding-top: 76px;
   box-sizing: border-box;
@@ -1052,7 +1053,7 @@ a{
 
 .MP_container>.div_cell {
   border: 2px solid;
-  border-color: #cdcbcb3d;
+  border-color: #d8cba2;
   padding: 20px;
   border-radius: 15px;
 }
@@ -1063,6 +1064,9 @@ a{
   grid-column-start: 1;
   grid-column-end: 2;
   text-align: center;
+
+  display: grid;
+  grid-template-rows: 180px   58px repeat(4, 70px) ;
 }
 
 .UserCard>.Username {
@@ -1070,14 +1074,29 @@ a{
   margin: 12px;
 }
 
-.UserCard>.Description {
-  font-size: 20px;
+.UserCard>.Progress {
+  font-size: 25px;
+  margin: 12px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3,1fr);
+}
 
+.UserCard>.Progress>.ProgressType{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.UserCard>.Progress>.ProgressAmmount{
+  font-size: 28px;
 }
 
 .UserCard img {
   border-radius: 50%;
   margin: 10px;
+
 }
 
 .AccountDetails {
@@ -1123,13 +1142,16 @@ a{
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
+  place-items: center;
 }
 
 .AD_fieldName {
   font-weight: bold;
 }
 
-.AD_fieldContent {}
+.AD_fieldContent {
+
+}
 
 .RS_rows div {
   display: grid;
@@ -1187,7 +1209,10 @@ a{
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: 2;
-    text-align: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 180px repeat(2,1fr);
   }
 
   .UserCard img {
@@ -1208,11 +1233,10 @@ a{
     grid-row-end: 4;
   }
 
-  .empty {
+  .Buttons {
     grid-column: 1;
     grid-row-start: 4;
     grid-row-end: 5;
-    text-align: center;
   }
 }
 
@@ -1245,13 +1269,73 @@ a{
     font-size: 25px;
     margin: 15px;
   }
-
   .UserCard>.Description {
     font-size: 17px;
 
   }
 
-  .UserCard img {
-    width: 130px;
+  .UserCard>.Progress>.ProgressType{
+    font-size: 15px;
+  }
+  .UserCard>.Progress>.ProgressAmmount{
+    font-size: 20px;
   }
 }
+
+/* @media only screen and (max-height: 850px) {
+
+}
+*/
+@media only screen and (max-height: 500px) {
+  .MP_container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+      }
+
+      .UserCard{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,100px);
+        grid-row-end: 2;
+      }
+      .UserCard img {
+        width: 90px;
+      }
+      .UserCard>.Username {
+        font-size: 25px;
+        margin: 10px;
+      }
+      .UserCard>.Description {
+        font-size: 17px;
+      }
+
+      .UserCard>.Progress>.ProgressType{
+        font-size: 15px;
+      }
+      .UserCard>.Progress>.ProgressAmmount{
+        font-size: 20px;
+      }
+
+    
+      .AccountDetails {
+        grid-row: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: left;
+        padding: 20px;
+      }
+    
+      .RecentScores {
+        grid-row: 1;
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      .RS_rows div {
+        padding: 10px;
+      }
+    
+      .Buttons {
+        grid-row: 1;
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+    } 
