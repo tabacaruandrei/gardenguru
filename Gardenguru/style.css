@@ -1269,7 +1269,126 @@ a{
   }
 }
 
-<<<<<<< HEAD
+
+.Top_container{
+  /* width: 100vw; */
+  height: 100vh;
+
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  padding-top: 76px;
+  box-sizing: border-box;
+}
+
+
+.Top_selectMenu {
+  
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  gap: 20px;
+  padding: 10px;
+  justify-content: right;
+}
+
+
+.Top_selectMenu>.div_cell {
+  width: 500px;
+  border: 2px solid;
+  border-color: #d8cba2;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 15px;
+
+}
+.TSM_currentTop{
+
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+}
+
+.TSM_currentTop p{
+  font-size: 22px;
+  font-weight: bold;
+}
+.TSM_topSelection{
+
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.TSM_topSelection ul{
+  width: 500px;
+  list-style: none;
+  padding: 10px;
+  transition: all 1s cubic-bezier(0, 1, 0.21, 1);;
+}
+
+.TSM_topSelection ul li{
+  line-height: 55px;
+}
+.TSM_topSelection ul li a{
+
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.TSM_topSelection .icon{
+display: flex;
+
+} 
+
+
+.TSM_topSelection ul li:hover a{
+  background: #d8cba2;
+}
+
+.TSM_topSelection ul.meniu_tools,
+.TSM_topSelection ul.meniu_water,
+.TSM_topSelection ul.meniu_soil,
+.TSM_topSelection ul.meniu_weather,
+.TSM_topSelection ul.meniu_trees,
+.TSM_topSelection ul.meniu_flowers,
+.TSM_topSelection ul.meniu_vegetables{
+  display: none;
+}
+
+.Top_display {
+  display: grid;
+  grid-template-rows: repeat(6,1fr);
+  gap: 10px;
+  padding: 10px;
+  justify-items: left;
+}
+
+.Top_display>.div_cell {
+  width: 500px;
+  border: 2px solid;
+  border-color: #d8cba2;
+  padding: 15px;
+  margin: 25px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 70px 250px 150px;
+  align-items: center;
+}
+
+.Top_display>.div_cell li{
+font-size: 24px;
+}
+
+
 /*tools*/
 .toolsMainContainer{
   padding-top:68px;
@@ -1371,62 +1490,3 @@ a{
 .margin30{
   margin-bottom: 30px;
 }
-=======
-/* @media only screen and (max-height: 850px) {
-
-}
-*/
-@media only screen and (max-height: 500px) {
-  .MP_container{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 400px;
-      }
-
-      .UserCard{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,100px);
-        grid-row-end: 2;
-      }
-      .UserCard img {
-        width: 90px;
-      }
-      .UserCard>.Username {
-        font-size: 25px;
-        margin: 10px;
-      }
-      .UserCard>.Description {
-        font-size: 17px;
-      }
-
-      .UserCard>.Progress>.ProgressType{
-        font-size: 15px;
-      }
-      .UserCard>.Progress>.ProgressAmmount{
-        font-size: 20px;
-      }
-
-    
-      .AccountDetails {
-        grid-row: 1;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        text-align: left;
-        padding: 20px;
-      }
-    
-      .RecentScores {
-        grid-row: 1;
-        grid-column-start: 3;
-        grid-column-end: 4;
-      }
-      .RS_rows div {
-        padding: 10px;
-      }
-    
-      .Buttons {
-        grid-row: 1;
-        grid-column-start: 4;
-        grid-column-end: 5;
-      }
-    } 
->>>>>>> 0eabf9fad366c2f46d54aba6e441cd6970bf8635
