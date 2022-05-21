@@ -1091,28 +1091,24 @@ a {
 }
 
 
+/* <Gabriel> */
 .MP_container {
-  /* width: 100vw; */
+  width: 100vw;
   height: 100vh;
 
-
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 40px;
   padding: 10px;
   padding-top: 76px;
   box-sizing: border-box;
-}
 
-.MP_container{
   background-image: url(images/backgroundImage2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 0 0 0 #ffffff;
-    padding: 70px;
-    border-bottom: 5px solid #cdcbcb3d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 0 #ffffff;
+  padding: 70px;
+  border-bottom: 5px solid #cdcbcb3d;
 }
 
 .MP_container>.div_cell {
@@ -1161,7 +1157,6 @@ a {
 .UserCard img {
   border-radius: 50%;
   margin: 10px;
-
 }
 
 .AccountDetails {
@@ -1231,9 +1226,8 @@ a {
 
 
 .Top_container {
-  /* width: 100vw; */
+  width: 100vw;
   height: 100vh;
-
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1241,18 +1235,16 @@ a {
   padding: 10px;
   padding-top: 76px;
   box-sizing: border-box;
-}
-.Top_container{
-background-image: url(images/backgroundImage2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 0 0 0 #ffffff;
-    padding: 70px;
-    border-bottom: 5px solid #cdcbcb3d;
+
+  background-image: url(images/backgroundImage2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 0 #ffffff;
+  padding: 70px;
+  border-bottom: 5px solid #cdcbcb3d;
 }
 
 .Top_selectMenu {
-
   display: grid;
   grid-template-rows: 150px 1fr;
   gap: 20px;
@@ -1262,22 +1254,24 @@ background-image: url(images/backgroundImage2.jpg);
 
 
 .Top_selectMenu>.div_cell {
-  background-color: #ffffff;
+
   width: 500px;
+
+  border-radius: 15px;
   border: 2px solid;
   border-color: #d8cba2;
+
   padding: 20px;
   margin: 30px;
-  border-radius: 15px;
 
+  background-color: #ffffff;
 }
 
 .TSM_currentTop {
-
-  margin: 30px;
   display: flex;
   justify-content: center;
   line-height: 40px;
+  transition: all 0.5s ease;
 }
 
 .TSM_currentTop p {
@@ -1286,10 +1280,9 @@ background-image: url(images/backgroundImage2.jpg);
 }
 
 .TSM_topSelection {
-
   display: flex;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .TSM_topSelection ul {
@@ -1345,13 +1338,17 @@ background-image: url(images/backgroundImage2.jpg);
 }
 
 .Top_display>.div_cell {
-  background-color: #ffffff;
   width: 500px;
+
   border: 2px solid;
   border-color: #d8cba2;
+  border-radius: 15px;
+
+  background-color: #ffffff;
+
   padding: 15px;
   margin: 25px;
-  border-radius: 15px;
+
   display: grid;
   grid-template-columns: 70px 250px 150px;
   align-items: center;
@@ -1360,7 +1357,7 @@ background-image: url(images/backgroundImage2.jpg);
 .Top_display>.div_cell li {
   font-size: 24px;
 }
-
+/* </Gabriel> */
 
 @media only screen and (max-width: 700px) {
   .underHeader {
@@ -1391,6 +1388,8 @@ background-image: url(images/backgroundImage2.jpg);
     grid-gap: 40px;
   }
 
+
+  /* <Gabriel> */
   .TSM_currentTop {
     height: 120px;
     text-align: center;
@@ -1428,7 +1427,6 @@ background-image: url(images/backgroundImage2.jpg);
   .MP_container {
     grid-template-columns: 1fr;
     grid-template-rows: 370px 450px 450px 250px;
-
   }
 
   .UserCard {
@@ -1501,6 +1499,8 @@ background-image: url(images/backgroundImage2.jpg);
   }
 
 }
+
+/* </Gabriel> - .containerIndexBasics */
 
 @media only screen and (min-width: 1200px) {
   .containerIndexBasics {
