@@ -402,7 +402,7 @@
     </div>
     <div class="Top_display">
       <div class="FirstPlace div_cell">
-        <li>
+        <li class="top_place">
           <p>#1</p>
         </li>
         <li class="firstPlace_name top_name">
@@ -413,7 +413,7 @@
         </li>
       </div>
       <div class="SecondPlace div_cell">
-        <li>
+        <li class="top_place">
           <p>#2</p>
         </li>
         <li class="secondPlace_name top_name">
@@ -424,7 +424,7 @@
         </li>
       </div>
       <div class="ThirdPlace div_cell">
-        <li>
+        <li class="top_place">
           <p>#3</p>
         </li>
         <li class="thirdPlace_name top_name">
@@ -435,7 +435,7 @@
         </li>
       </div>
       <div class="ForthPlace div_cell">
-        <li>
+        <li class="top_place">
           <p>#4</p>
         </li>
         <li class="forthPlace_name top_name">
@@ -446,7 +446,7 @@
         </li>
       </div>
       <div class="FifthPlace div_cell">
-        <li>
+        <li class="top_place">
           <p>#5</p>
         </li>
         <li class="fifthPlace_name top_name">
@@ -643,46 +643,57 @@
     const buton_trees_back = document.querySelector(".buton_trees_back");
     const buton_flowers_back = document.querySelector(".buton_flowers_back");
     const buton_vegetables_back = document.querySelector(".buton_vegetables_back");
+    
+    const header = document.querySelector(".header");
 
+    const observer = new ResizeObserver((entires) =>{
+      const headerWidth = entires[0];
+      const isSmall = headerWidth.contentRect.width < 700
+      x = isSmall ? "-300px" : "-500px"
+    }) 
+    
+    observer.observe(header)
+    
+    let x;
     //Functionarea butoanelor inainte
     buton_tools.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_tools.style.display = "block";
       }, 200);
     });
     buton_water.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_water.style.display = "block";
       }, 200);
     });
     buton_soil.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_soil.style.display = "block";
       }, 200);
     });
     buton_weather.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_weather.style.display = "block";
       }, 200);
     });
     buton_trees.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_trees.style.display = "block";
       }, 200);
     });
     buton_flowers.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_flowers.style.display = "block";
       }, 200);
     });
     buton_vegetables.onclick = (() => {
-      meniu_principal.style.marginLeft = "-500px";
+      meniu_principal.style.marginLeft = x;
       setTimeout(() => {
         meniu_vegetables.style.display = "block";
       }, 200);
