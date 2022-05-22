@@ -1606,6 +1606,7 @@ a {
 
 .imgMainRadius {
   border-radius: 10px;
+  max-width: 100%;
 }
 
 .infoSubject {
@@ -1656,3 +1657,33 @@ a {
 .margin30 {
   margin-bottom: 30px;
 }
+
+/*responsive tools and water*/
+@media only screen and (max-width: 900px){
+   .imgItem{
+     margin: 0 auto;
+   }
+   .imgResp{
+     max-width: 150px;
+   }
+   .toolContainer{
+     grid-template-columns: 1fr;
+   }
+   .listSquare>li{
+     font-size: 15px;
+     text-align: justify;
+   }
+   .toolsTitle{
+     font-size: 23px;
+   }
+   .basicsSplit{
+     grid-template-columns: 1fr;
+   }
+   .rolesContainer{
+     grid-template-columns: 1fr;
+   }
+   .descriptionTitle{
+     font-weight: unset;
+   }
+}
+
