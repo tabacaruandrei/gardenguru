@@ -31,7 +31,7 @@ const buttons = document.querySelectorAll(".button-slide");
 
 const buttonOptions = {
   threshold: 0,
-  rootMargin: "0px 0px -125px 0px"
+  rootMargin: "0px 0px -130px 0px"
 }
 
 const buttonsOnScroll = new IntersectionObserver(function(
