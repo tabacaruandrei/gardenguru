@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="enn" dir="ltr">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -103,7 +106,7 @@
                 <div class="ProgressType">
                     Total Lessons Read:
                 </div>
-                <div class="ProgressAmmount">
+                <div class="ProgressAmount">
                     15
                 </div>
             </div>
@@ -112,7 +115,7 @@
                 <div class="ProgressType">
                     Total Quizes Done:
                 </div>
-                <div class="ProgressAmmount">
+                <div class="ProgressAmount">
                     9
                 </div>
             </div>
@@ -121,7 +124,7 @@
                 <div class="ProgressType">
                     Total Quizes Passed:
                 </div>
-                <div class="ProgressAmmount">
+                <div class="ProgressAmount">
                     6
                 </div>
             </div>
@@ -130,7 +133,8 @@
                 <div class="ProgressType">
                     Average Score:
                 </div>
-                <div class="ProgressAmmount">
+                <div class="ProgressAmount">
+                    9.5
                 </div>
             </div>
 
@@ -139,46 +143,50 @@
         <div class="AccountDetails div_cell">
             <h2>Account details</h2>
             <ul class="AD_rows">
-                <hr style="margin: 10px 0px;">
+                <hr>
                 <div class="AD_field">
                     <ul class="AD_fieldName">
-                        Full Name
+                        <span id="profileaccountinfo"></span>Full Name<span id="profileasterisk">*</span></span>
                     </ul>
                     <ul class="AD_fieldContent">
-                        John Branch
+                        <span class="AD_fieldContentText" id="profiletextname">John Branch</span>
+                        <input class="AD_fieldContentBox" type="text" id="profilename">
                     </ul>
                 </div>
-                <hr style="margin: 10px 0px;">
+                <hr>
                 <div class="AD_field">
                     <ul class="AD_fieldName">
-                        Email
+                        <span id="profileaccountinfo">Email<span id="profileasterisk">*</span></span>
                     </ul>
                     <ul class="AD_fieldContent">
-                        jhonnybranch@google.com
+                        <span class="AD_fieldContentText" id="profiletextemail">johnnybranch@google.com</span>
+                        <input class="AD_fieldContentBox" type="email" id="profileemail">
                     </ul>
                 </div>
-                <hr style="margin: 10px 0px;">
+                <hr>
                 <div class="AD_field">
                     <ul class="AD_fieldName">
-                        Phone Number
+                        <span id="profileaccountinfo">Phone Number</span>
                     </ul>
                     <ul class="AD_fieldContent">
-                        0707070707
+                        <span class="AD_fieldContentText" id="profiletextnumber">0707070707</span>
+                        <input class="AD_fieldContentBox" type="text" id="profilenumber">
                     </ul>
                 </div>
-                <hr style="margin: 10px 0px;">
+                <hr>
                 <div class="AD_field">
                     <ul class="AD_fieldName">
-                        Adress
+                        <span id="profileaccountinfo">Address</span>
                     </ul>
                     <ul class="AD_fieldContent">
-                        Branch Street
+                        <span class="AD_fieldContentText" id="profiletextaddress">Branch Street</span>
+                        <input class="AD_fieldContentBox" type="text" id="profileaddress">
                     </ul>
                 </div>
             </ul>
         </div>
         <div class="RecentScores div_cell">
-            <h2>Recent Scores</h2>
+            <h2>Recent scores</h2>
             <ul class="RS_rows">
                 <hr style="margin: 10px 0px;">
                 <div class="RS_field">
@@ -188,7 +196,7 @@
                     <ul class="RS_fieldScore">
                         83/100
                     </ul>
-                    <ul class="RS_fielTime">
+                    <ul class="RS_fieldTime">
                         7:58
                     </ul>
                 </div>
@@ -202,7 +210,7 @@
                     <ul class="RS_fieldScore">
                         68/100
                     </ul>
-                    <ul class="RS_fielTime">
+                    <ul class="RS_fieldTime">
                         5:07
                     </ul>
                 </div>
@@ -230,7 +238,7 @@
                     <ul class="RS_fieldScore">
                         41/100
                     </ul>
-                    <ul class="RS_fielTime">
+                    <ul class="RS_fieldTime">
                         9:06
                     </ul>
                 </div>
@@ -238,25 +246,55 @@
         </div>
 
         <div class="Buttons div_cell">
-            <div class="Button ">
-                Modify
+            <div class="Button edit" id="profilesave">
+                <li>Save changes</li>
             </div>
-            <div class="Button">
-                <a href="login.html">
-                    <li>Change Account</li>
-                </a>
+            <div class="Button view" id="profilemodify">
+                <li>Modify</li>
             </div>
-
-            <div class="Button">
-                <a href="index.html">
-                    <li>Log Out</li>
-                </a>
+            <div class="Button" id="profilechangepw">
+                <li>Change password</li>
+            </div>
+            <div class="Button edit" id="profilecancel">
+                <li>Cancel</li>
+            </div>
+            <div class="Button view" id="profilelogout">
+                <li>Log out</li>
             </div>
         </div>
     </div>
-    
+
+    <div class="footer">
+        <div class="footerintro">
+          <span id="labelFooter">Gardenguru is made by
+          <a href="https://github.com/tabacaruandrei">Tabacaru Andrei</a>,
+          <a href="https://github.com/ArdeleanuGabriel">Ardeleanu Gabriel</a>
+          and <a href="https://github.com/sandustefania">Sandu Stefania</a>.
+          </span>
+        </div>
+  
+        <div class="footerabout">
+          <span>Gardenguru is a website that provides a learning environment for both those getting their hands on gardening tools for the first time and those who are already skilled at maintaining their own gardens, aiming to help its users through proper information and interactive quizzes.</span>
+        </div>
+  
+        <div class="footerdescription">
+          <div class="sendquestions">
+            <span class="details">Ask us a question:<span>
+            <textarea name="name" rows="6" cols="30"></textarea>
+            <input type="button" name="" value="Submit">
+          </div>
+  
+          <div class="footerinfo">
+            <span id="descriptionFooter">
+            <a href="https://github.com/tabacaruandrei"><i style="font-size:40px" class="fa">&#xf09b;</i></a>
+            </span>
+            <span id="footercopyright">&copy <span id="footeryear" onload="getCurrentYear"></p> </span>
+          </div>
+        </div>
+      </div>
 
     <script type="text/javascript" src="scriptfile.js"></script>
+    <script type="text/javascript" src="profile_verify.js"></script>
 </body>
 
 </html>
