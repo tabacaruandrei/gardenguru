@@ -586,13 +586,13 @@ body::after {
 
 
 .title-from-top {
-  transform: translateY(-30px);
+  transform: translateY(-20px);
   opacity: 0;
 }
 
 .title-from-top.appear {
   transform: translateY(0%);
-  transition: opacity 100ms ease-in, transform 300ms cubic-bezier(.43, .06, .38, .88);
+  transition: opacity 200ms ease-in, transform 500ms cubic-bezier(.43, .06, .38, .88);
   opacity: 1;
 }
 
@@ -607,10 +607,9 @@ body::after {
 
 .categories-from-bottom.appear {
   transform: translateY(0);
-  transition: opacity 400ms ease-in, transform 500ms ease-in-out;
+  transition: opacity 400ms ease-in, transform 500ms ease-in;
   opacity: 1;
 }
-
 
 
 .footer {
@@ -1059,7 +1058,7 @@ li {
 
 .descriptionIndexBasics {
   font-family: 'Public Sans', sans-serif;
-  font-size: 15px;
+  font-size: 19px;
   color: #808080;
   text-align: center;
 }
@@ -1289,6 +1288,19 @@ hr{
   opacity: 100%;
 }
 
+.RS_rows div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.RS_fieldName {
+  font-weight: bold;
+}
+
 
 .Top_container {
   width: 100vw;
@@ -1431,6 +1443,7 @@ hr{
 
   .description {
     grid-template-columns: 1fr;
+    padding: 50px 30px;
   }
 
   .containerIndexCategories {
@@ -1610,14 +1623,16 @@ hr{
 
 /*tools*/
 .toolsMainContainer {
-  padding-top: 68px;
+  font-family: 'Public Sans', sans-serif;
+  padding-top: 86px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .toolsTitle {
   text-align: center;
-  font-size: 35px;
+  font-weight: 600;
+  font-size: 40px;
   color: rgb(26, 25, 25);
   padding: 20px;
 }
@@ -1628,23 +1643,43 @@ hr{
   margin: 20px 0px;
 }
 
+.tools-from-top {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+
+.tools-from-top.appear {
+  transform: translateY(0%);
+  transition: opacity 400ms ease-in, transform 600ms ease-out;
+  opacity: 1;
+}
+
+.toolPadding{
+  height: 10vh;
+}
+
 .toolContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   border-bottom: 2px solid #cdcbcb3d;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .titleTool {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 500;
   color: rgb(26, 25, 25);
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .listSquare>li {
+  font-family: 'IBM Plex Sans', sans-serif;
   list-style-type: square;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  word-spacing: 2px;
   color: #2e2c2c;
 }
 
@@ -1660,17 +1695,63 @@ hr{
   text-align: center;
 }
 
+.tooldescription-from-left {
+  transform: translateX(-3%);
+  opacity: 0%;
+}
+
+.tooldescription-from-left.appear {
+  transform: translateX(0);
+  transition: opacity 400ms ease-in, transform 500ms ease-out;
+  opacity: 1;
+}
+
+
+.tooldescription-from-top {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.tooldescription-from-top.appear {
+  transform: translateY(0%);
+  transition: opacity 100ms ease-in, transform 300ms cubic-bezier(.43, .06, .38, .88);
+  opacity: 1;
+}
+
 /*water*/
 .basicsSplit {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding: 20px;
 }
 
 .basicsItem {
   background-image: url(images/backgroundImage2.jpg);
   padding: 15px;
+}
+
+.water-from-top {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.water-from-top.appear {
+  transform: translateY(0%);
+  transition: opacity 400ms ease-in, transform 600ms ease-out;
+  transition-delay: 50ms;
+  opacity: 1;
+}
+
+.waterimage-from-top {
+  transform: translateY(-5%);
+  opacity: 0;
+}
+
+.waterimage-from-top.appear {
+  transform: translateY(0%);
+  transition: opacity 500ms ease-out, transform 600ms ease-out;
+  transition-delay: 100ms;
+  opacity: 1;
 }
 
 .imgMainRadius {
@@ -1680,6 +1761,16 @@ hr{
 
 .infoSubject {
   text-align: justify;
+  color: #2e2c2c;
+}
+
+.waterListSquare>li {
+  font-family: 'IBM Plex Sans', sans-serif;
+  list-style-type: square;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
   color: #2e2c2c;
 }
 
@@ -1729,11 +1820,18 @@ hr{
 
 /*responsive tools and water*/
 @media only screen and (max-width: 900px){
+   .descriptionItem:nth-child(2).appear {
+      transition-delay: 0ms;
+    }
    .imgItem{
      margin: 0 auto;
+     margin-bottom: 20px;
    }
    .imgResp{
      max-width: 150px;
+   }
+   .titleTool{
+    margin-bottom: 10px;
    }
    .toolContainer{
      grid-template-columns: 1fr;
@@ -1751,10 +1849,65 @@ hr{
    .rolesContainer{
      grid-template-columns: 1fr;
    }
-   .descriptionTitle{
-     font-weight: unset;
-   }
 }
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1199px){
+  .toolsMainContainer {
+    margin-right: 5%;
+  }
+  .listSquare>li {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (min-width: 900px) and (max-width: 999px){
+  .toolsMainContainer {
+    margin-right: 5%;
+  }
+  .listSquare>li {
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .mainContainerIndex{
+    padding: 70px 30px;
+  }
+
+  .basicsSplit{
+    padding: 0px;
+  }
+
+  .waterListSquare>li {
+    font-family: 'IBM Plex Sans', sans-serif;
+    list-style-type: square;
+    margin-left: 15px;
+    padding-right: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #2e2c2c;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-height: 500px) {
   .MP_container{
