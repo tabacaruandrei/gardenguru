@@ -166,6 +166,26 @@ body::after {
 }
 
 
+.login-from-top-form{
+  transform: translateY(-5%);
+  /* opacity: 0; */
+}
+
+.login-from-top-form.appear{
+  transform: translateY(0%);
+  transition: transform 500ms ease-out;
+}
+
+.login-from-top-background{
+  opacity: 0.4;
+}
+
+.login-from-top-background.appear{
+  transition: opacity 300ms ease-out;
+  opacity: 1;
+}
+
+
 .accountIntro {
   display: flex;
   flex-direction: column;
@@ -1092,27 +1112,25 @@ a {
 
 
 /* <Gabriel> */
-.MP_container {
-  width: 100vw;
-  height: 100vh;
 
+
+
+
+
+
+
+
+.MP_container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 20px;
   padding: 10px;
   padding-top: 76px;
   box-sizing: border-box;
-
-  background-image: url(images/backgroundImage2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0 0 0 #ffffff;
-  padding: 70px;
-  border-bottom: 5px solid #cdcbcb3d;
+  font-family: 'Public Sans', sans-serif;
 }
 
 .MP_container>.div_cell {
-  background-color: #ffffff;
   border: 2px solid;
   border-color: #d8cba2;
   padding: 20px;
@@ -1125,33 +1143,33 @@ a {
   grid-column-start: 1;
   grid-column-end: 2;
   text-align: center;
-
   display: grid;
-  grid-template-rows: 180px 58px repeat(4, 70px);
+  grid-template-rows: 180px 58px repeat(4, 70px) ;
 }
 
 .UserCard>.Username {
   font-size: 30px;
   margin: 12px;
+  font-weight: 700;
 }
 
 .UserCard>.Progress {
-  font-size: 25px;
-  margin: 12px;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  margin-top: 15px;
+  grid-template-columns: repeat(1,1fr);
 }
 
-.UserCard>.Progress>.ProgressType {
+.UserCard>.Progress>.ProgressType{
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-.UserCard>.Progress>.ProgressAmmount {
-  font-size: 28px;
+.UserCard>.Progress>.ProgressAmount{
+  font-size: 25px;
+  font-weight: 400;
 }
 
 .UserCard img {
@@ -1187,41 +1205,88 @@ a {
 }
 
 .Buttons>.Button {
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
-  vertical-align: center;
-  border: 5px solid;
-  border-color: #cdcbcb3d;
-  border-radius: 15px;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 10px;
   padding: 5px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.Button:hover{
+  transition: 200ms;
+  background-color: #ffefbb;
 }
 
 .AD_rows div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
   place-items: center;
 }
 
 .AD_fieldName {
   font-weight: bold;
+}]
+
+hr{
+  margin: 10px 0px;
 }
 
-.AD_fieldContent {}
-
-.RS_rows div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
+.AD_fieldContentText{
+  font-weight: 400;
+  font-size: 20px;
+  padding: 3px;
 }
 
-.RS_fieldName {
-  font-weight: bold;
+.AD_fieldContent input {
+  border: 2px solid #e9e9e9;
+  height: 30px;
+  font-size: 13px;
+  padding-left: 5px;
+  transition: 125ms ease-out;
+}
+
+.AD_fieldContent input:hover{
+  transition: 125ms;
+  outline: none;
+  border-color: #c5bfbf;
+  opacity: 100%;
+}
+
+.AD_fieldContent input:focus{
+  transition: 125ms;
+  outline: none;
+  border-color: #808080;
+  opacity: 100%;
+}
+
+.AD_fieldContent input.invalid{
+  transition: 125mws ease-in;
+  outline: none;
+  border-color: red;
+  opacity: 100%;
+}
+
+.AD_fieldContent input.invalid:hover{
+  transition: 125ms;
+  outline: none;
+  border-color: rgb(196, 0, 0);
+  opacity: 100%;
+}
+
+.AD_fieldContent input.invalid:focus{
+  transition: 125ms;
+  outline: none;
+  border-color: rgb(255, 0, 0);
+  opacity: 100%;
 }
 
 
@@ -1386,6 +1451,10 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 40px;
+  }
+  
+  .descriptionItem:nth-child(2).appear{
+    transition-delay: 0ms;
   }
 
 
@@ -1687,3 +1756,56 @@ a {
    }
 }
 
+@media only screen and (max-height: 500px) {
+  .MP_container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+      }
+
+      .UserCard{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,100px);
+        grid-row-end: 2;
+      }
+      .UserCard img {
+        width: 90px;
+      }
+      .UserCard>.Username {
+        font-size: 25px;
+        margin: 10px;
+      }
+      .UserCard>.Description {
+        font-size: 17px;
+      }
+
+      .UserCard>.Progress>.ProgressType{
+        font-size: 15px;
+      }
+      .UserCard>.Progress>.ProgressAmmount{
+        font-size: 20px;
+      }
+
+    
+      .AccountDetails {
+        grid-row: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: left;
+        padding: 20px;
+      }
+    
+      .RecentScores {
+        grid-row: 1;
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      .RS_rows div {
+        padding: 10px;
+      }
+    
+      .Buttons {
+        grid-row: 1;
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+    } 
