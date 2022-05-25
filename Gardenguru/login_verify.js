@@ -7,20 +7,8 @@ const login = document.getElementById("loginbutton");
 const input = document.querySelectorAll("input");
 
 
-
-
-
-
-// myInput.addEventListener('change', e => {
-//   console.log('am facut o schimbare in input');
-// });
-
-
-
-
 input.forEach(textbox =>{
   console.log(textbox.id);
-  // if(textbox.parentElement.get)
   if(textbox.id === "user"){
     textbox.addEventListener('input', e => {
       e.preventDefault();
@@ -38,47 +26,6 @@ input.forEach(textbox =>{
     });
     console.log("am intrat in pw");
   }
-
-  
-
-//   if(textbox.id === "loginbutton"){
-//     textbox.addEventListener('input', e => {
-//       e.preventDefault();
-//       checkValid();
-//     });
-//   //   // checkValid();
-//   //   // if(firstName.classList.contains('valid')){
-//   //   //   console.log("datele merg");
-//   //   // }
-//   //   console.log("verific datele");
-//   // }
-//   // textbox.addEventListener('input', e => {
-//   //   e.preventDefault();
-//   //   checkInputs();
-//   // });
-//     }
-});
-
-// function updateValue(e) {
-//   log.textContent = e.target.value;
-//   console.log(e);
-// }
-
-// form.addEventListener
-
-// function checkInputs(){
-//   const userValue = user.value.trim();
-//   const firstNameValue = firstName.value.trim();
-//   const emailValue = email.value.trim();
-//   const pwValue = pw.value.trim();
-//   const pw2Value = pw2.value.trim();
-
-//   checkUser(userValue);
-//   checkName(firstNameValue);
-//   checkEmail(emailValue);
-//   checkPw(pwValue);
-//   checkPw2(pw2Value);
-// }
 
 function checkUser(){
   const userValue = user.value.trim();
