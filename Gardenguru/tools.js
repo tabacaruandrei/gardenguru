@@ -43,6 +43,7 @@ const slideOnScroll = new IntersectionObserver(function(
   entries,
   slideOnScroll
 ) {
+  i = 0;
   entries.forEach(entry => {
     if(!entry.isIntersecting){
       return;
@@ -60,6 +61,7 @@ const slideOnScroll = new IntersectionObserver(function(
       slideOnScroll.unobserve(entry.target);
     }
   });
+  i = 0;
 },
 slideOptions);
 
@@ -78,29 +80,31 @@ function toolsSlideIn(entry, index){
 
 const fadeOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -300px 0px"
+    rootMargin: "0px 0px -350px 0px"
 }
 
 const fadeOnScroll = new IntersectionObserver(function(
     entries,
     fadeOnScroll
 ) {
+  i = 0;
     entries.forEach(entry => {
         if(!entry.isIntersecting){
             return;
         }
-        else if(entry.target.classList.contains('tooldescription-from-top')){
-            console.log('sunt in tooldescription-from-top'); 
-            toolsFadeIn(entry, i);
-            i = i + 1;
-            slideOnScroll.unobserve(entry.target);
-        }
+        // else if(entry.target.classList.contains('tooldescription-from-top')){
+        //     console.log('sunt in tooldescription-from-top'); 
+        //     toolsFadeIn(entry, i);
+        //     i = i + 1;
+        //     slideOnScroll.unobserve(entry.target);
+        // }
         else{
             entry.target.classList.add("appear");
             console.log(entry.target.parentElement);
             fadeOnScroll.unobserve(entry.target);
         }
     });
+  i = 0;
 },
 fadeOptions);
 
