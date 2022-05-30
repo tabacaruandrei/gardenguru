@@ -742,10 +742,37 @@ input:visited:hover {
 }
 
 
+.AD_fieldContentText{
+  display: block;
+}
 
+.AD_fieldContentText.modify{
+  display: none;
+}
 
+.AD_fieldContentBox{
+  display: none;
+}
 
+.AD_fieldContentBox.modify{
+  display: block;
+}
 
+.Button.edit{
+  display: none;
+}
+
+.Button.edit.modify{
+  display: block;
+}
+
+.Button.view{
+  display: block;
+}
+
+.Button.view.modify{
+  display: none;
+}
 
 
 @media only screen and (max-width: 800px) {
