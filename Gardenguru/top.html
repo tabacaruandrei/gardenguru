@@ -91,7 +91,12 @@
   </header>
 
   <div class="Top_container">
-    <div class="Top_selectMenu">
+    <ul class="resize_backButton_container">
+      <ul class="resize_backButton">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ul>
+    </ul>
+    <ul class="Top_selectMenu">
       <div class="TSM_currentTop div_cell">
         <p class="currentTop">Please select a category to view it's Top</p>
       </div>
@@ -399,76 +404,78 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="Top_display">
-      <div class="FirstPlace div_cell">
-        <li class="top_place">
-          <p>#1</p>
-        </li>
-        <li class="firstPlace_name top_name">
-          Ion Creanga
-        </li>
-        <li class="firstPlace_score top_score">
-          100/100
-        </li>
-      </div>
-      <div class="SecondPlace div_cell">
-        <li class="top_place">
-          <p>#2</p>
-        </li>
-        <li class="secondPlace_name top_name">
-          Ion Eminescu
-        </li>
-        <li class="secondPlace_score top_score">
-          92/100
-        </li>
-      </div>
-      <div class="ThirdPlace div_cell">
-        <li class="top_place">
-          <p>#3</p>
-        </li>
-        <li class="thirdPlace_name top_name">
-          Mihai Creanga
-        </li>
-        <li class="thirdPlace_score top_score">
-          80/100
-        </li>
-      </div>
-      <div class="ForthPlace div_cell">
-        <li class="top_place">
-          <p>#4</p>
-        </li>
-        <li class="forthPlace_name top_name">
-          Mihai Eminescu
-        </li>
-        <li class="forthPlace_score top_score">
-          70/100
-        </li>
-      </div>
-      <div class="FifthPlace div_cell">
-        <li class="top_place">
-          <p>#5</p>
-        </li>
-        <li class="fifthPlace_name top_name">
+    </ul>
+    <ul class="Top_display">
+      <div class="Top_displayContainer">
+        <div class="Firstplace div_cell">
+          <li class="top_place">
+            #1
+          </li>
+          <li class="firstPlace_name top_name">
+            Ion Creanga
+          </li>
+          <li class="firstPlace_score top_score">
+            100/100
+          </li>
+        </div>
+        <div class="Secondplace div_cell">
+          <li class="top_place">
+            #2
+          </li>
+          <li class="secondPlace_name top_name">
+            Ion Eminescu
+          </li>
+          <li class="secondPlace_score top_score">
+            92/100
+          </li>
+        </div>
+        <div class="Thirdplace div_cell">
+          <li class="top_place">
+            #3
+          </li>
+          <li class="thirdPlace_name top_name">
+            Mihai Creanga
+          </li>
+          <li class="thirdPlace_score top_score">
+            80/100
+          </li>
+        </div>
+        <div class="Forthplace div_cell">
+          <li class="top_place">
+            #4
+          </li>
+          <li class="forthPlace_name top_name">
+            Mihai Eminescu
+          </li>
+          <li class="forthPlace_score top_score">
+            70/100
+          </li>
+        </div>
+        <div class="Fifthplace div_cell">
+          <li class="top_place">
+            #5
+          </li>
+          <li class="fifthPlace_name top_name">
 
-        </li>
-        <li class="fifthPlace_score top_score">
-          
-        </li>
-        
+          </li>
+          <li class="fifthPlace_score top_score">
+
+          </li>
+
+        </div>
+        <div class="Myplace div_cell">
+          <li class="top_place">
+            Me
+          </li>
+          <li class="myPlace_name top_name">
+            Mihai Eminescu
+          </li>
+          <li class="myPlace_score top_score">
+            70/100
+          </li>
+        </div>
       </div>
-      <div class="MyPlace div_cell">
-        <li>
-          <p>Me</p>
-        </li>
-        <li class="myPlace_name top_name">
-          Mihai Eminescu
-        </li>
-        <li class="myPlace_score top_score">
-          70/100
-        </li>
-      </div>
-    </div>
+    </ul>
   </div>
   <script type="text/javascript" src="top_selectionMenu.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

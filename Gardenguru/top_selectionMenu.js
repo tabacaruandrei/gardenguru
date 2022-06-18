@@ -1,6 +1,30 @@
 // Pentru fiecare categorie din meniul principal exista un buton care intra pe meniul categoriei respective, un buton pentru a ne reintoarce la meniul principal, si cate un buton pentru fiecare optiune posibila din meniul accesat: ex pentru tools avem buton_tools, buton_tools_back, si buton_tools_quiz[1..5].
 //Pentru primele doua avem mai jos codul js pentru navigarea meniului iar pentru fiecare buton care schimba topul o sa preluam date din database
 
+
+
+const meniuSelect = document.querySelector(".TSM_topSelection");
+
+const topDisplay = document.querySelector(".Top_displayContainer");
+const currentTop = document.querySelector(".TSM_currentTop");
+
+const backButton = document.querySelector(".resize_backButton_container");
+
+const header = document.querySelector(".header");
+
+const observer = new ResizeObserver((entires) => {
+  const headerWidth = entires[0];
+  const isSmall = headerWidth.contentRect.width < 700
+  const isResized = headerWidth.contentRect.width < 1200
+  x = isSmall ? "-300px" : "-500px"
+  y = isResized ? true : false
+})
+
+observer.observe(header)
+
+let x;
+let y;
+
 //Functionarea butoanelor ce schimba continut
 let string = document.querySelector(".currentTop");
 const buton_tools_quiz1 = document.querySelector(".buton_tools_quiz1");
@@ -39,9 +63,43 @@ const buton_vegetables_quiz3 = document.querySelector(".buton_vegetables_quiz3")
 const buton_vegetables_quiz4 = document.querySelector(".buton_vegetables_quiz4");
 const buton_vegetables_quiz5 = document.querySelector(".buton_vegetables_quiz5");
 
+while (y == false) {
+  currentTop.style.margin = "20px";
+  topDisplay.style.margin = "20px";
+  meniuSelect.style.display = "flex";
+  meniuSelect.style.margin = "20px";
+  topDisplay.style.display = "none";
+  backButton.style.display = "grid";
+}
+
+backButton.onclick = (() => {
+  if (y) {
+    currentTop.style.margin = "20px";
+    topDisplay.style.margin = "20px";
+    meniuSelect.style.display = "flex";
+    setTimeout(() => {
+      meniuSelect.style.margin = "20px";
+      topDisplay.style.display = "none";
+      backButton.style.display = "none";
+    }, 200);
+  }
+});
+
 buton_tools_quiz1.onclick = (() => {
   string.innerHTML = "Viewing Top 5 for Tools Section - Quiz 1";
+  if (y) {
+    meniuSelect.style.marginLeft = "-650px";
+    currentTop.style.marginTop = "-10px";
+    currentTop.style.marginBottom = "55px";
+    topDisplay.style.display = "grid";
+    setTimeout(() => {
+      topDisplay.style.marginTop = "-670px";
+      meniuSelect.style.display = "none";
+      backButton.style.display = "grid";
+    }, 200);
+  }
 });
+
 buton_tools_quiz2.onclick = (() => {
   string.innerHTML = "Viewing Top 5 for Tools Section - Quiz 2";
 });
@@ -148,6 +206,7 @@ buton_vegetables_quiz5.onclick = (() => {
 
 //Navigarea meniului de categorii
 // Referinta pentru meniul principal
+
 const meniu_principal = document.querySelector(".meniu_principal");
 //Butoanele care intra in meniurile respective
 const buton_tools = document.querySelector(".buton_tools");
@@ -174,17 +233,7 @@ const buton_trees_back = document.querySelector(".buton_trees_back");
 const buton_flowers_back = document.querySelector(".buton_flowers_back");
 const buton_vegetables_back = document.querySelector(".buton_vegetables_back");
 
-const header = document.querySelector(".header");
 
-const observer = new ResizeObserver((entires) =>{
-  const headerWidth = entires[0];
-  const isSmall = headerWidth.contentRect.width < 700
-  x = isSmall ? "-300px" : "-500px"
-}) 
-
-observer.observe(header)
-
-let x;
 //Functionarea butoanelor inainte
 buton_tools.onclick = (() => {
   meniu_principal.style.marginLeft = x;
@@ -260,3 +309,4 @@ buton_vegetables_back.onclick = (() => {
   meniu_vegetables.style.display = "none";
   meniu_principal.style.marginLeft = "0px";
 });
+
