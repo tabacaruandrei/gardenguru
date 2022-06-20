@@ -1,0 +1,37 @@
+.divAllMainCategories{
+    font-family: 'Public Sans', sans-serif;
+    padding-top: 86px;
+}
+.divGridMainCategories{
+    display: grid;
+}
+.mainTitle{
+    text-align: center;
+    font-weight: 600;
+    font-size: 33px;
+    color: rgb(26, 25, 25);
+    padding: 20px;
+}
+.mainSubtitle{
+  color: #5aa53f;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.containerIndexCategories2{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-gap: 10px;
+}
+.bodyBackground{
+    background-image: url(images/backgroundImage2.jpg);
+}
+.mainSubDescription{
+    color: #2e2c2c;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 19px;
+    text-align: center;
+  }
+  .treesImg{
+    border-radius: 15px;
+  }
