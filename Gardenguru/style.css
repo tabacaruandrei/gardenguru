@@ -1402,14 +1402,14 @@ hr {
 }
 
 .TSM_topSelection,
-.QSM_topSelection {
+.QSM_quizSelection {
   display: flex;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
 .TSM_topSelection ul,
-.QSM_topSelection ul {
+.QSM_quizSelection ul {
   width: 500px;
   list-style: none;
   padding: 10px;
@@ -1418,12 +1418,12 @@ hr {
 }
 
 .TSM_topSelection ul li,
-.QSM_topSelection ul li {
+.QSM_quizSelection ul li {
   line-height: 55px;
 }
 
 .TSM_topSelection ul li a,
-.QSM_topSelection ul li a {
+.QSM_quizSelection ul li a {
 
   color: #000000;
   font-size: 18px;
@@ -1436,14 +1436,14 @@ hr {
 }
 
 .TSM_topSelection .icon,
-.QSM_topSelection .icon {
+.QSM_quizSelection .icon {
   display: flex;
 
 }
 
 
 .TSM_topSelection ul li:hover a,
-.QSM_topSelection ul li:hover a {
+.QSM_quizSelection ul li:hover a {
   background: #d8cba2;
 }
 
@@ -1457,13 +1457,13 @@ hr {
   display: none;
 }
 
-.QSM_topSelection ul.meniu_tools,
-.QSM_topSelection ul.meniu_water,
-.QSM_topSelection ul.meniu_soil,
-.QSM_topSelection ul.meniu_weather,
-.QSM_topSelection ul.meniu_trees,
-.QSM_topSelection ul.meniu_flowers,
-.QSM_topSelection ul.meniu_vegetables {
+.QSM_quizSelection ul.meniu_tools,
+.QSM_quizSelection ul.meniu_water,
+.QSM_quizSelection ul.meniu_soil,
+.QSM_quizSelection ul.meniu_weather,
+.QSM_quizSelection ul.meniu_trees,
+.QSM_quizSelection ul.meniu_flowers,
+.QSM_quizSelection ul.meniu_vegetables {
   display: none;
 }
 
@@ -1722,11 +1722,20 @@ hr {
 
 @media only screen and (max-width: 1600px) {
   .Exercise_container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+
   }
 
+  .Quiz_selectMenu {
+    grid-column-start: 2;
+    justify-content: center;
+  }
+
+  .selectedQuiz_container{
+    display: none;
+  }
 
 }
 
@@ -1778,7 +1787,7 @@ hr {
   }
 
   .TSM_topselection,
-  .QSM_topSelection ul {
+  .QSM_quizSelection ul {
     width: 300px;
   }
 
@@ -1874,7 +1883,7 @@ hr {
 
   .Top_selectMenu,
   .Quiz_selectMenu {
-    grid-column-start: 1;
+    grid-column-start: 2;
     justify-content: center;
   }
 
@@ -1950,9 +1959,7 @@ hr {
     margin: 20px !important;
   }
 
-  .resize_backButton_container {
-    display: none !important;
-  }
+}
 
   @media only screen and (max-width: 1110px) {
     .UserCard>.Username {

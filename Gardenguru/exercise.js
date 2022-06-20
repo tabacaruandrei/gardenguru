@@ -80,13 +80,6 @@ begin_quiz.onclick = (() => {
 });
 
 
-buton_tools_quiz3.onclick = function () {
-    clearInterval(interval);
-    tens = "00";
-    seconds = "00";
-    appendSeconds.innerHTML = seconds;
-    appendTens.innerHTML = tens;
-};
 
 //Matching
 const draggableListItems = document.querySelectorAll('.draggable-list li');
@@ -186,11 +179,11 @@ submitQuiz.onclick = (() => {
     else if (minutes < 05)
         score = score * 2;
 
-        timer_container.style.display = "none";
-        exercise_container.style.display = "none";
-        buttons_container.style.display = "none";
-        finalScore.style.display = "grid";
-        scoreObtained.innerHTML = score;
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "grid";
+    scoreObtained.innerHTML = score;
 
 });
 
@@ -250,3 +243,222 @@ function addEventListeners() {
         item.addEventListener('dragleave', dragLeave);
     })
 }
+
+
+
+
+//Navigarea meniului de categorii
+// Referinta pentru meniul principal
+
+const meniu_principal = document.querySelector(".meniu_principal");
+//Butoanele care intra in meniurile respective
+const buton_tools = document.querySelector(".buton_tools");
+const buton_water = document.querySelector(".buton_water");
+const buton_soil = document.querySelector(".buton_soil");
+const buton_weather = document.querySelector(".buton_weather");
+const buton_trees = document.querySelector(".buton_trees");
+const buton_flowers = document.querySelector(".buton_flowers");
+const buton_vegetables = document.querySelector(".buton_vegetables");
+//Referintele pentru meniurile secundare
+const meniu_tools = document.querySelector(".meniu_tools");
+const meniu_water = document.querySelector(".meniu_water");
+const meniu_soil = document.querySelector(".meniu_soil");
+const meniu_weather = document.querySelector(".meniu_weather");
+const meniu_trees = document.querySelector(".meniu_trees");
+const meniu_flowers = document.querySelector(".meniu_flowers");
+const meniu_vegetables = document.querySelector(".meniu_vegetables");
+//Referintele pentru butoanele de refenire la meniul principal
+const buton_tools_back = document.querySelector(".buton_tools_back");
+const buton_water_back = document.querySelector(".buton_water_back");
+const buton_soil_back = document.querySelector(".buton_soil_back");
+const buton_weather_back = document.querySelector(".buton_weather_back");
+const buton_trees_back = document.querySelector(".buton_trees_back");
+const buton_flowers_back = document.querySelector(".buton_flowers_back");
+const buton_vegetables_back = document.querySelector(".buton_vegetables_back");
+
+const header = document.querySelector(".header");
+let y;
+const observer = new ResizeObserver((entires) => {
+    const headerWidth = entires[0];
+    const isResized = headerWidth.contentRect.width < 1600
+    y = isResized ? true : false
+})
+observer.observe(header);
+
+
+//Functionarea butoanelor inainte
+buton_tools.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_tools.style.display = "block";
+    }, 200);
+});
+buton_water.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_water.style.display = "block";
+    }, 200);
+});
+buton_soil.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_soil.style.display = "block";
+    }, 200);
+});
+buton_weather.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_weather.style.display = "block";
+    }, 200);
+});
+buton_trees.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_trees.style.display = "block";
+    }, 200);
+});
+buton_flowers.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_flowers.style.display = "block";
+    }, 200);
+});
+buton_vegetables.onclick = (() => {
+    meniu_principal.style.marginLeft = "-500px";
+    setTimeout(() => {
+        meniu_vegetables.style.display = "block";
+    }, 200);
+});
+
+
+//Functionarea butoanelor inapoi
+
+buton_tools_back.onclick = (() => {
+    meniu_tools.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_water_back.onclick = (() => {
+    meniu_water.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_soil_back.onclick = (() => {
+    meniu_soil.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_weather_back.onclick = (() => {
+    meniu_weather.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_trees_back.onclick = (() => {
+    meniu_trees.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_flowers_back.onclick = (() => {
+    meniu_flowers.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+buton_vegetables_back.onclick = (() => {
+    meniu_vegetables.style.display = "none";
+    meniu_principal.style.marginLeft = "0px";
+});
+
+
+//butoane ce schimba continut
+let string = document.querySelector(".currentQuiz");
+const buton_tools_quiz1 = document.querySelector(".buton_tools_quiz1");
+const buton_tools_quiz2 = document.querySelector(".buton_tools_quiz2");
+const buton_tools_quiz3 = document.querySelector(".buton_tools_quiz3");
+const buton_tools_quiz4 = document.querySelector(".buton_tools_quiz4");
+const buton_tools_quiz5 = document.querySelector(".buton_tools_quiz5");
+const buton_water_quiz1 = document.querySelector(".buton_water_quiz1");
+const buton_water_quiz2 = document.querySelector(".buton_water_quiz2");
+const buton_water_quiz3 = document.querySelector(".buton_water_quiz3");
+const buton_water_quiz4 = document.querySelector(".buton_water_quiz4");
+const buton_water_quiz5 = document.querySelector(".buton_water_quiz5");
+const buton_soil_quiz1 = document.querySelector(".buton_soil_quiz1");
+const buton_soil_quiz2 = document.querySelector(".buton_soil_quiz2");
+const buton_soil_quiz3 = document.querySelector(".buton_soil_quiz3");
+const buton_soil_quiz4 = document.querySelector(".buton_soil_quiz4");
+const buton_soil_quiz5 = document.querySelector(".buton_soil_quiz5");
+const buton_weather_quiz1 = document.querySelector(".buton_weather_quiz1");
+const buton_weather_quiz2 = document.querySelector(".buton_weather_quiz2");
+const buton_weather_quiz3 = document.querySelector(".buton_weather_quiz3");
+const buton_weather_quiz4 = document.querySelector(".buton_weather_quiz4");
+const buton_weather_quiz5 = document.querySelector(".buton_weather_quiz5");
+const buton_trees_quiz1 = document.querySelector(".buton_trees_quiz1");
+const buton_trees_quiz2 = document.querySelector(".buton_trees_quiz2");
+const buton_trees_quiz3 = document.querySelector(".buton_trees_quiz3");
+const buton_trees_quiz4 = document.querySelector(".buton_trees_quiz4");
+const buton_trees_quiz5 = document.querySelector(".buton_trees_quiz5");
+const buton_flowers_quiz1 = document.querySelector(".buton_flowers_quiz1");
+const buton_flowers_quiz2 = document.querySelector(".buton_flowers_quiz2");
+const buton_flowers_quiz3 = document.querySelector(".buton_flowers_quiz3");
+const buton_flowers_quiz4 = document.querySelector(".buton_flowers_quiz4");
+const buton_flowers_quiz5 = document.querySelector(".buton_flowers_quiz5");
+const buton_vegetables_quiz1 = document.querySelector(".buton_vegetables_quiz1");
+const buton_vegetables_quiz2 = document.querySelector(".buton_vegetables_quiz2");
+const buton_vegetables_quiz3 = document.querySelector(".buton_vegetables_quiz3");
+const buton_vegetables_quiz4 = document.querySelector(".buton_vegetables_quiz4");
+const buton_vegetables_quiz5 = document.querySelector(".buton_vegetables_quiz5");
+
+
+
+//miscarea meniului/testului in screen de width redus
+const quiz_selectMenu = document.querySelector(".Quiz_selectMenu");
+const meniuSelect = document.querySelector(".QSM_quizSelection");
+const currentQuiz = document.querySelector(".QSM_currentQuiz");
+const quizDisplay = document.querySelector(".selectedQuiz_container");
+const backButtonQuiz = document.querySelector(".resize_backButton_container");
+
+buton_tools_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 1";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+    if (y) {
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+backButtonQuiz.onclick = (() => {
+    if (y) {
+
+        quiz_selectMenu.style.display = "grid";
+        quizDisplay.style.display = "none";
+        backButtonQuiz.style.display = "none";
+
+
+        //clock reset
+        clearInterval(interval);
+        tens = "00";
+        seconds = "00";
+        appendSeconds.innerHTML = seconds;
+        appendTens.innerHTML = tens;
+        // currentQuiz.style.margin = "20px";
+        // quizDisplay.style.margin = "20px";
+        // meniuSelect.style.display = "flex";
+        // setTimeout(() => {
+        //     meniuSelect.style.margin = "20px";
+        //     quizDisplay.style.display = "none";
+        //     backButtonQuiz.style.display = "none";
+        // }, 200);
+    }
+});
