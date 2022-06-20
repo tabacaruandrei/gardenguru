@@ -1,3 +1,17 @@
+document.addEventListener('showTop', init);
+
+function init(){
+  let query = window.matchMedia("(min-width:1200px");
+
+  if(query.matches){
+    document.querySelector(".Top_displayContainer").style.display="grid";
+  }
+  else{
+    document.querySelector(".Top_displayContainer").style.display="grid";
+  }
+}
+
+
 // Pentru fiecare categorie din meniul principal exista un buton care intra pe meniul categoriei respective, un buton pentru a ne reintoarce la meniul principal, si cate un buton pentru fiecare optiune posibila din meniul accesat: ex pentru tools avem buton_tools, buton_tools_back, si buton_tools_quiz[1..5].
 //Pentru primele doua avem mai jos codul js pentru navigarea meniului iar pentru fiecare buton care schimba topul o sa preluam date din database
 
