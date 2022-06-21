@@ -22,6 +22,13 @@
     display: grid;
     grid-template-columns: 1fr  1fr;
     grid-gap: 10px;
+    margin-top: 20px;
+}
+.containerIndexCategories3{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
 }
 .bodyBackground{
     background-image: url(images/backgroundImage2.jpg);
