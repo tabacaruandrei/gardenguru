@@ -1359,7 +1359,7 @@ hr {
   border-color: #d8cba2;
   padding: 20px;
   border-radius: 15px;
-  margin-left: -70px;
+  margin-left: -100px;
 }
 
 .Top_selectMenu,
@@ -1621,7 +1621,8 @@ hr {
   transition: 2s;
 }
 
-.matched {
+.matched,
+.over {
   opacity: 50%;
 }
 
@@ -1693,7 +1694,18 @@ hr {
   padding: 20px;
   border: 2px solid #d8cba2;
   border-radius: 10px;
+  display: none;
 }
+.select_aQuiz{
+  grid-row-start: 2;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border: 2px solid #d8cba2;
+  border-radius: 10px;
+}
+
 
 .finalScore {
   grid-row-start: 2;
@@ -1723,7 +1735,6 @@ hr {
 @media only screen and (max-width: 1600px) {
   .Exercise_container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
     justify-items: center;
 
   }
@@ -1775,10 +1786,6 @@ hr {
 
 
   /* <Gabriel> */
-  .Top_container,
-  .Exercise_container {
-    height: auto;
-  }
 
   .TSM_currentTop,
   .QSM_currentQuiz {
@@ -1786,7 +1793,7 @@ hr {
     text-align: center;
   }
 
-  .TSM_topselection,
+  .TSM_topselection ul,
   .QSM_quizSelection ul {
     width: 300px;
   }
@@ -1795,6 +1802,13 @@ hr {
   .Quiz_selectMenu {
     grid-template-rows: 160px 605px;
   }
+
+  .Top_display,
+  .selectedQuiz_container {
+    grid-column-start: 2;
+    justify-content: center;
+  }
+
 
   .Top_selectMenu>.div_cell,
   .Quiz_selectMenu>.div_cell {
@@ -1878,7 +1892,7 @@ hr {
   .Top_container,
   .Exercise_container {
     height: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .Top_selectMenu,
