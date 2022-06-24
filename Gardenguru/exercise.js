@@ -634,7 +634,7 @@ buton_weather_quiz1.onclick = (() => {
     exercise6_b2.innerHTML="After a good rain";
     exercise6_b3.innerHTML="Cloudy weather";
     exercise6_b4.innerHTML="Dry weather";
-    exercise6_b5.innerHTML="Dry weather";
+    exercise6_b5.innerHTML="Normal weather";
 
 
     if (y) {
