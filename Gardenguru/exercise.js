@@ -732,7 +732,7 @@ buton_soil_quiz1.onclick = (() => {
 });
 
 buton_flowers_quiz1.onclick = (() => {
-    string.innerHTML = "Solving the quiz for Flowers Section - Quiz 1";
+    string.innerHTML = "Solving the quiz for Flowers Section-Quiz 1";
     select_aQuiz.style.display="none";
     begin_quiz.style.display = "block";
     timer_container.style.display = "none";
@@ -772,15 +772,15 @@ buton_flowers_quiz1.onclick = (() => {
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
     exercise6_a1.innerHTML="Jade plant";
-    exercise6_a2.innerHTML="Hydrangea";
+    exercise6_a2.innerHTML="Hydran -gea";
     exercise6_a3.innerHTML="Boxwood";
     exercise6_a4.innerHTML="Orchid";
     exercise6_a5.innerHTML="Agave";
-    exercise6_b1.innerHTML='<img src="plant/plantsImages/jade.jgp" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="plant/plantsImages/hortensie.jgp" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/boxwood.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/Orchid.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/agave.png" style="width:50px">';
+    exercise6_b1.innerHTML='<img src="plants/plantsImages/jade.jpg" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="plants/plantsImages/hortensie.jpg" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="plants/plantsImages/boxwood.jpg" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="plants/plantsImages/Orchid.jpg" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="plants/plantsImages/agave.jpg" style="width:50px">';
 
 
     if (y) {
