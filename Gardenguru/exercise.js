@@ -554,8 +554,8 @@ buton_water_quiz1.onclick = (() => {
 
     exercise6_a1.innerHTML="Hot Climate";
     exercise6_a2.innerHTML="Photosynthesis";
-    exercise6_a3.innerHTML="Ornamental garden";
-    exercise6_a4.innerHTML="Transpiration";
+    exercise6_a3.innerHTML="Orna -mental garden";
+    exercise6_a4.innerHTML="Transpi -ration";
     exercise6_a5.innerHTML="Cooler Climate";
     exercise6_b1.innerHTML="Two inches a week";
     exercise6_b2.innerHTML="Food making process";
@@ -773,7 +773,7 @@ buton_flowers_quiz1.onclick = (() => {
 
     exercise6_a1.innerHTML="Jade plant";
     exercise6_a2.innerHTML="Hydran -gea";
-    exercise6_a3.innerHTML="Boxwood";
+    exercise6_a3.innerHTML="Box - wood";
     exercise6_a4.innerHTML="Orchid";
     exercise6_a5.innerHTML="Agave";
     exercise6_b1.innerHTML='<img src="plants/plantsImages/jade.jpg" style="width:50px">';
