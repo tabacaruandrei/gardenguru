@@ -10,20 +10,23 @@ correctAnswer: trowel
 Exercise 3: Fill in the blank with the correct word
 When choosing gloves, it is essential to look for the right ______ to keep your hands cool and comfortable
 correctAnswer: fabric
+
 Exercise 4: Choose the correct single answer
 What tool can protect your wrist and forearms from scatches while working?
 1.Trowel
 2.Loopers
 3.Gloves
 4.Spade
-correctAnswer: gloves
+correctAnswer: thirdAnswer
+
 Exercise 5: Choose the correct single answer
 Which of the following tools is best suited to level soil or compost?
 1.Spade
 2.Bow rake
 3.Hoe
 4.None of the above
-correctAnswer: bowRake
+correctAnswer: forthAnswer
+
 Exercise 6: Match each element from the left with the corresponding element on the right
 Imagini cu tools +nume (exemplul general ca de pe git)
 
@@ -33,6 +36,7 @@ Exercise 1: Fill in the blank with the correct word
 The process in which plants produce their own food is called ______________.
 
 correctAnswer: photosynthesis
+
 Exercise 2: Fill in the blank with the correct word
 A good soaking from time to time is ______ than several shallow watterings.
 correctAnswer: better
@@ -40,13 +44,15 @@ correctAnswer: better
 Exercise 3: Fill in the blank with the correct word
 Yellowing leaves and ____ can be a sign of both too little or too much water.
 correctAnswer: wilt
+
 Exercise 4: Choose the correct single answer
 The best way to know how much water your landscape needs is:
 1.Searching on the internet.
 2.Asking a professional.
 3.Visiting/Observing the plants yourself.
 4.Asking the seller from whom you bought the plants.
-correctAnswer: observing
+correctAnswer: thirdAnswer
+
 Exercise 5: Choose the correct single answer
 What is a good rule of thumb while watering ornamental gardens?
 1.One inch of water a month
@@ -54,6 +60,7 @@ What is a good rule of thumb while watering ornamental gardens?
 3.Water whenever it looks dry.
 4.One inch of water a week.
 correctAnswer: oneInchAWeek
+
 Exercise 6: Match each element from the left with the corresponding element on the right
 Watering schedule si unde sunt recomandate
 
@@ -69,6 +76,7 @@ correctAnswer: after
 Exercise 3: Fill in the blank with the correct word
 Knowing the _____ climate is important for successful gardening.
 correctAnswer: local
+
 Exercise 4: Choose the correct single answer
 Which of the following is NOT presented as a key element of weather for gardening?
 1.Heat
@@ -76,6 +84,7 @@ Which of the following is NOT presented as a key element of weather for gardenin
 3.Freeze
 4.Humidity.
 correctAnswer: humidity
+
 Exercise 5: Choose the correct single answer
 What is the connection between weather and tending to your plants?
 1.Certain weathers make gardening easier, but temperature is the key aspect.
@@ -93,13 +102,15 @@ Exercise 1: Fill in the blank with the correct word
 The first way to improve your soil is by using _______.
 
 correctAnswer: compost
+
 Exercise 2: Fill in the blank with the correct word
 The soil type ____ is a mixture of sand, silt and clay particles.
-correctAnswer: after
+correctAnswer: loam
 
 Exercise 3: Fill in the blank with the correct word
 Soil __ affects growth as it affects the access of nutrients and minerals.
 correctAnswer: pH
+
 Exercise 4: Choose the correct single answer
 Which of the following is NOT a primary nutrient for plants?
 1.Nitrogen
@@ -107,6 +118,7 @@ Which of the following is NOT a primary nutrient for plants?
 3.Phosphorus
 4.Oxygen
 correctAnswer: oxygen
+
 Exercise 5: Choose the correct single answer
 Which of the following is usually part of a soil mix.
 1.Gravel
@@ -114,6 +126,7 @@ Which of the following is usually part of a soil mix.
 3.Silt
 4.All of the above
 correctAnswer: silt
+
 Exercise 6: Match each element from the left with the corresponding element on the right
 Soil types and respective images 
 
@@ -121,15 +134,16 @@ Soil types and respective images
 Flowers Quiz #1
 Exercise 1: Fill in the blank with the correct word
 They usually store water in thick fleshy tissue, thus they sometimes have thicker leaves or stems.
-
 correctAnswer: succulents
+
 Exercise 2: Fill in the blank with the correct word
 The arborvitae is an _________ shrub, meaning it stays green all year round.
 correctAnswer: evergreen
 
 Exercise 3: Fill in the blank with the correct word
-The_________ may require special fertilizers if you want to keep it big and beautiful
+The_________ may require special fertilizers if you want to keep it big and beautiful.
 correctAnswer:  hydrangea
+
 Exercise 4: Choose the correct single answer
 Which of the following is NOT a primary an evergreen?
 1.Mother-in-law’s tongue.
@@ -137,6 +151,7 @@ Which of the following is NOT a primary an evergreen?
 3.Boxwood.
 4.Blue Star Juniper.
 correctAnswer: mother
+
 Exercise 5: Choose the correct single answer
 Which of the following succulents is an indoor plant?
 1.Lilium
@@ -159,6 +174,7 @@ correctAnswer: apple
 Exercise 3: Fill in the blank with the correct word
 The_________ is a nut made by the oak tree in a cup-like structure.
 correctAnswer:  acorn
+
 Exercise 4: Choose the correct single answer
 Which of the following fruit trees is grown more for it’s blossom?
 1.Apple tree.
@@ -166,6 +182,7 @@ Which of the following fruit trees is grown more for it’s blossom?
 3.Quince tree.
 4.Cherry tree.
 correctAnswer: quince
+
 Exercise 5: Choose the correct single answer
 Which of the following trees has needle like leaves?
 1.Quince tree

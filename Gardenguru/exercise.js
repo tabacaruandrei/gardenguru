@@ -512,6 +512,444 @@ buton_tools_quiz1.onclick = (() => {
 
 });
 
+buton_water_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Water Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
+    exercise1_question.innerHTML = "The process in which plants produce their own food is called ______________.";
+    exercise1_correctAnswer.innerHTML = "photosynthesis";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "A good soaking from time to time is ______ than several shallow watterings.";
+    exercise2_correctAnswer.innerHTML = "better";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "Yellowing leaves and ____ can be a sign of both too little or too much water.";
+    exercise3_correctAnswer.innerHTML = "wilt";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "The best way to know how much water your landscape needs is:";
+    exercise4_radio1_label.innerHTML= "1.Searching on the internet.";
+    exercise4_radio2_label.innerHTML= "2.Asking a professional.";
+    exercise4_radio3_label.innerHTML= "3.Visiting/Observing the plants yourself.";
+    exercise4_radio4_label.innerHTML= "4.Asking the seller from whom you bought the plants.";
+    exercise4_correctAnswer.innerHTML = "thirdAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "What is a good rule of thumb while watering ornamental gardens?";
+    exercise5_radio1_label.innerHTML= "1.One inch of water a month";
+    exercise5_radio2_label.innerHTML= "2.Two inches of water every other week.";
+    exercise5_radio3_label.innerHTML= "3.Water whenever it looks dry.";
+    exercise5_radio4_label.innerHTML= "4.One inch of water a week.";
+    exercise5_correctAnswer.innerHTML = "forthAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+buton_weather_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Weather Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
+    exercise1_question.innerHTML = "Tilling is easiest when the soil is ___ .";
+    exercise1_correctAnswer.innerHTML = "dry";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "The best time for wedding is a couple of hours _____ rain.";
+    exercise2_correctAnswer.innerHTML = "after";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "Knowing the _____ climate is important for successful gardening.";
+    exercise3_correctAnswer.innerHTML = "local";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "Which of the following is NOT presented as a key element of weather for gardening?";
+    exercise4_radio1_label.innerHTML= "1.Heat";
+    exercise4_radio2_label.innerHTML= "2.Wind";
+    exercise4_radio3_label.innerHTML= "3.Freeze";
+    exercise4_radio4_label.innerHTML= "4.Humidity.";
+    exercise4_correctAnswer.innerHTML = "forthAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "What is the connection between weather and tending to your plants?";
+    exercise5_radio1_label.innerHTML= "1.Certain weathers make gardening easier, but temperature is the key aspect.";
+    exercise5_radio2_label.innerHTML= "2.You should only do certain chores during certain weathers.";
+    exercise5_radio3_label.innerHTML= "3.Weather has little to do with gardening.";
+    exercise5_radio4_label.innerHTML= "4.Temperature can influence gardening, but air humidity is more important.";
+    exercise5_correctAnswer.innerHTML = "firstAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+buton_soil_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Soil Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
+    exercise1_question.innerHTML = "The first way to improve your soil is by using _______.";
+    exercise1_correctAnswer.innerHTML = "compost";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "The soil type ____ is a mixture of sand, silt and clay particles.";
+    exercise2_correctAnswer.innerHTML = "loam";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "Soil __ affects growth as it affects the access of nutrients and minerals.";
+    exercise3_correctAnswer.innerHTML = "pH";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "Which of the following is NOT a primary nutrient for plants?";
+    exercise4_radio1_label.innerHTML= "1.Nitrogen";
+    exercise4_radio2_label.innerHTML= "2.Potassium";
+    exercise4_radio3_label.innerHTML= "3.Phosphorus";
+    exercise4_radio4_label.innerHTML= "4.Oxygen";
+    exercise4_correctAnswer.innerHTML = "forthAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "Which of the following is usually part of a soil mix.";
+    exercise5_radio1_label.innerHTML= "1.Gravel";
+    exercise5_radio2_label.innerHTML= "2.Rocks";
+    exercise5_radio3_label.innerHTML= "3.Silt";
+    exercise5_radio4_label.innerHTML= "4.All of the above";
+    exercise5_correctAnswer.innerHTML = "thirdAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+buton_flowers_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Flowers Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: What term does this definition describe?";
+    exercise1_question.innerHTML = "They usually store water in thick fleshy tissue, thus they sometimes have thicker leaves or stems.";
+    exercise1_correctAnswer.innerHTML = "succulents";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "The arborvitae is an _________ shrub, meaning it stays green all year round.";
+    exercise2_correctAnswer.innerHTML = "evergreen";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "The_________ may require special fertilizers if you want to keep it big and beautiful.";
+    exercise3_correctAnswer.innerHTML = "hydrangea";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "Which of the following is NOT a primary an evergreen?";
+    exercise4_radio1_label.innerHTML= "1.Mother-in-law s tongue.";
+    exercise4_radio2_label.innerHTML= "2.Arborvitae.";
+    exercise4_radio3_label.innerHTML= "3.Boxwood.";
+    exercise4_radio4_label.innerHTML= "4.Blue Star Juniper.";
+    exercise4_correctAnswer.innerHTML = "firstAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "Which of the following succulents is an indoor plant?";
+    exercise5_radio1_label.innerHTML= "1.Lilium";
+    exercise5_radio2_label.innerHTML= "2.Hydrangea";
+    exercise5_radio3_label.innerHTML= "3.Jade plant";
+    exercise5_radio4_label.innerHTML= "4.Aloe";
+    exercise5_correctAnswer.innerHTML = "thirdAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+buton_trees_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Trees Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
+    exercise1_question.innerHTML = "The _____ tree has smooth, resinous, varicoloured or white bark.";
+    exercise1_correctAnswer.innerHTML = "birch";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "The _____ fruits is divided in two main categories: dessert/for eating and cookers.";
+    exercise2_correctAnswer.innerHTML = "apple";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "The_________ is a nut made by the oak tree in a cup-like structure.";
+    exercise3_correctAnswer.innerHTML = "acorn";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "Which of the following fruit trees is grown more for it’s blossom?";
+    exercise4_radio1_label.innerHTML= "1.Apple tree.";
+    exercise4_radio2_label.innerHTML= "2.Peach tree.";
+    exercise4_radio3_label.innerHTML= "3.Quince tree.";
+    exercise4_radio4_label.innerHTML= "4.Cherry tree.";
+    exercise4_correctAnswer.innerHTML = "thirdAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "Which of the following trees has needle like leaves?";
+    exercise5_radio1_label.innerHTML= "1.Quince tree";
+    exercise5_radio2_label.innerHTML= "2.Willow tree";
+    exercise5_radio3_label.innerHTML= "3.Pine tree";
+    exercise5_radio4_label.innerHTML= "4.Birch tree";
+    exercise5_correctAnswer.innerHTML = "forthAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
+buton_tools_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 1";
+    select_aQuiz.style.display="none";
+    begin_quiz.style.display = "block";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
+    exercise1_question.innerHTML = "When you want to move a lot of loose soil, or slice through roots, a _____ is your tool of choice.";
+    exercise1_correctAnswer.innerHTML = "spade";
+
+    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
+    exercise2_question.innerHTML = "A ______ is what you will use whent you want to remove weeds or mix fertilizer.";
+    exercise2_correctAnswer.innerHTML = "trowel";
+
+    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
+    exercise3_question.innerHTML = "When choosing gloves, it is essential to look for the right ______ to keep your hands cool and comfortable";
+    exercise3_correctAnswer.innerHTML = "fabric";
+
+    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
+    exercise4_question.innerHTML = "What tool can protect your wrist and forearms from scatches while working?";
+    exercise4_radio1_label.innerHTML= "1.Trowel";
+    exercise4_radio2_label.innerHTML= "2.Loopers";
+    exercise4_radio3_label.innerHTML= "3.Gloves";
+    exercise4_radio4_label.innerHTML= "4.Spade";
+    exercise4_correctAnswer.innerHTML = "thirdAnswer";
+
+    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
+    exercise5_question.innerHTML = "Which of the following tools is best suited to level soil or compost?";
+    exercise5_radio1_label.innerHTML= "1.Spade";
+    exercise5_radio2_label.innerHTML= "2.Bow rake";
+    exercise5_radio3_label.innerHTML= "3.Hoe";
+    exercise5_radio4_label.innerHTML= "4.None of the above";
+    exercise5_correctAnswer.innerHTML = "forthAnswer";
+
+    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
+
+    exercise6_a1.innerHTML="Bow Rake";
+    exercise6_a2.innerHTML="Trowel";
+    exercise6_a3.innerHTML="Spade";
+    exercise6_a4.innerHTML="Loopers";
+    exercise6_a5.innerHTML="Hoe";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+
+
+    if (y) {
+        quiz_selectMenu.style.display = "none";
+        backButtonQuiz.style.marginRight = "280px";
+        backButtonQuiz.style.display = "grid";
+        quizDisplay.style.display = "block";
+
+
+        // meniuSelect.style.marginLeft = "-650px";
+        // currentTop.style.marginTop = "-10px";
+        // currentTop.style.marginBottom = "55px";
+        // topDisplay.style.display = "grid";
+        // setTimeout(() => {
+        //   topDisplay.style.marginTop = "-670px";
+        //   meniuSelect.style.display = "none";
+        //   backButton.style.display = "grid";
+        // }, 200);
+    }
+
+
+});
+
 backButtonQuiz.onclick = (() => {
     if (y) {
 
