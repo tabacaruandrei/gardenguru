@@ -552,16 +552,16 @@ buton_water_quiz1.onclick = (() => {
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML="Hot Climate";
+    exercise6_a2.innerHTML="Photosynthesis";
+    exercise6_a3.innerHTML="Ornamental garden";
+    exercise6_a4.innerHTML="Transpiration";
+    exercise6_a5.innerHTML="Cooler Climate";
+    exercise6_b1.innerHTML="Two inches a week";
+    exercise6_b2.innerHTML="Food making process";
+    exercise6_b3.innerHTML="One inch a week";
+    exercise6_b4.innerHTML="Loosing water process";
+    exercise6_b5.innerHTML="Minimum watering";
 
 
     if (y) {
@@ -586,7 +586,7 @@ buton_water_quiz1.onclick = (() => {
 });
 
 buton_weather_quiz1.onclick = (() => {
-    string.innerHTML = "Solving the quiz for Weather Section - Quiz 1";
+    string.innerHTML = "Solving the quiz for Weather Section-Quiz 1";
     select_aQuiz.style.display="none";
     begin_quiz.style.display = "block";
     timer_container.style.display = "none";
@@ -625,16 +625,16 @@ buton_weather_quiz1.onclick = (() => {
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML="Seeding";
+    exercise6_a2.innerHTML="Wedding";
+    exercise6_a3.innerHTML="Trans - planting";
+    exercise6_a4.innerHTML="Tilling";
+    exercise6_a5.innerHTML="Digging";
+    exercise6_b1.innerHTML="Right before rain";
+    exercise6_b2.innerHTML="After a good rain";
+    exercise6_b3.innerHTML="Cloudy weather";
+    exercise6_b4.innerHTML="Dry weather";
+    exercise6_b5.innerHTML="Dry weather";
 
 
     if (y) {
@@ -698,16 +698,16 @@ buton_soil_quiz1.onclick = (() => {
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML="Sand";
+    exercise6_a2.innerHTML="Compost";
+    exercise6_a3.innerHTML="Clay";
+    exercise6_a4.innerHTML="Silt";
+    exercise6_a5.innerHTML="Loam";
+    exercise6_b1.innerHTML='<img src="basics/basicsImages/img1soil.jpg" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="basics/basicsImages/compost.png" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/img3soil.jpg" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/silt.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/img2soil.jpg" style="width:50px">';
 
 
     if (y) {
@@ -771,16 +771,16 @@ buton_flowers_quiz1.onclick = (() => {
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML="Jade plant";
+    exercise6_a2.innerHTML="Hydrangea";
+    exercise6_a3.innerHTML="Boxwood";
+    exercise6_a4.innerHTML="Orchid";
+    exercise6_a5.innerHTML="Agave";
+    exercise6_b1.innerHTML='<img src="plant/plantsImages/jade.jgp" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="plant/plantsImages/hortensie.jgp" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="basics/basicsImages/boxwood.png" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="basics/basicsImages/Orchid.png" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="basics/basicsImages/agave.png" style="width:50px">';
 
 
     if (y) {
@@ -844,16 +844,16 @@ buton_trees_quiz1.onclick = (() => {
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML="Willow tree";
+    exercise6_a2.innerHTML="Maple";
+    exercise6_a3.innerHTML="Apricot";
+    exercise6_a4.innerHTML="Birch";
+    exercise6_a5.innerHTML="Peach";
+    exercise6_b1.innerHTML='<img src="trees/treesImages/willow.jpg" style="width:50px">';
+    exercise6_b2.innerHTML='<img src="trees/treesImages/maple.jpg" style="width:50px">';
+    exercise6_b3.innerHTML='<img src="trees/treesImages/apricot.jpg" style="width:50px">';
+    exercise6_b4.innerHTML='<img src="trees/treesImages/birch.jpg" style="width:50px">';
+    exercise6_b5.innerHTML='<img src="trees/treesImages/peach.jpg" style="width:50px">';
 
 
     if (y) {
@@ -877,78 +877,7 @@ buton_trees_quiz1.onclick = (() => {
 
 });
 
-buton_tools_quiz1.onclick = (() => {
-    string.innerHTML = "Solving the quiz for Tools Section - Quiz 1";
-    select_aQuiz.style.display="none";
-    begin_quiz.style.display = "block";
-    timer_container.style.display = "none";
-    exercise_container.style.display = "none";
-    buttons_container.style.display = "none";
-    finalScore.style.display = "none";
 
-
-    exercise1_number.innerHTML = "Exercise 1: Fill in the blank with the correct word";
-    exercise1_question.innerHTML = "When you want to move a lot of loose soil, or slice through roots, a _____ is your tool of choice.";
-    exercise1_correctAnswer.innerHTML = "spade";
-
-    exercise2_number.innerHTML = "Exercise 2: Fill in the blank with the correct word";
-    exercise2_question.innerHTML = "A ______ is what you will use whent you want to remove weeds or mix fertilizer.";
-    exercise2_correctAnswer.innerHTML = "trowel";
-
-    exercise3_number.innerHTML = "Exercise 3: Fill in the blank with the correct word";
-    exercise3_question.innerHTML = "When choosing gloves, it is essential to look for the right ______ to keep your hands cool and comfortable";
-    exercise3_correctAnswer.innerHTML = "fabric";
-
-    exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
-    exercise4_question.innerHTML = "What tool can protect your wrist and forearms from scatches while working?";
-    exercise4_radio1_label.innerHTML= "1.Trowel";
-    exercise4_radio2_label.innerHTML= "2.Loopers";
-    exercise4_radio3_label.innerHTML= "3.Gloves";
-    exercise4_radio4_label.innerHTML= "4.Spade";
-    exercise4_correctAnswer.innerHTML = "thirdAnswer";
-
-    exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
-    exercise5_question.innerHTML = "Which of the following tools is best suited to level soil or compost?";
-    exercise5_radio1_label.innerHTML= "1.Spade";
-    exercise5_radio2_label.innerHTML= "2.Bow rake";
-    exercise5_radio3_label.innerHTML= "3.Hoe";
-    exercise5_radio4_label.innerHTML= "4.None of the above";
-    exercise5_correctAnswer.innerHTML = "forthAnswer";
-
-    exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
-
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
-
-
-    if (y) {
-        quiz_selectMenu.style.display = "none";
-        backButtonQuiz.style.marginRight = "280px";
-        backButtonQuiz.style.display = "grid";
-        quizDisplay.style.display = "block";
-
-
-        // meniuSelect.style.marginLeft = "-650px";
-        // currentTop.style.marginTop = "-10px";
-        // currentTop.style.marginBottom = "55px";
-        // topDisplay.style.display = "grid";
-        // setTimeout(() => {
-        //   topDisplay.style.marginTop = "-670px";
-        //   meniuSelect.style.display = "none";
-        //   backButton.style.display = "grid";
-        // }, 200);
-    }
-
-
-});
 
 backButtonQuiz.onclick = (() => {
     if (y) {
