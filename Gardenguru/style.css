@@ -1478,6 +1478,7 @@ hr {
   grid-template-rows: repeat(6, 120px);
 
   transition: all 0.5s ease;
+  display: none;
 }
 
 .Top_display>.Top_displayContainer>.div_cell {
@@ -1704,6 +1705,17 @@ hr {
   padding: 20px;
   border: 2px solid #d8cba2;
   border-radius: 10px;
+}
+
+.select_invalidQuiz{
+  grid-row-start: 2;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border: 2px solid #d8cba2;
+  border-radius: 10px;
+  display: none;
 }
 
 

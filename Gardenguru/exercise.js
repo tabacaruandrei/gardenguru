@@ -159,6 +159,7 @@ observer.observe(header);
 let score = 0;
 const begin_quiz = document.querySelector(".begin_quiz");
 const select_aQuiz = document.querySelector(".select_aQuiz");
+const select_invalidQuiz = document.querySelector(".select_invalidQuiz");
 const timer_container = document.querySelector(".quizTimer_container");
 const exercise_container = document.querySelector(".currentExercise_container");
 const buttons_container = document.querySelector(".quizButtons");
@@ -441,8 +442,9 @@ const backButtonQuiz = document.querySelector(".resize_backButton_container");
 
 buton_tools_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Tools Section - Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -463,32 +465,32 @@ buton_tools_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "What tool can protect your wrist and forearms from scatches while working?";
-    exercise4_radio1_label.innerHTML= "1.Trowel";
-    exercise4_radio2_label.innerHTML= "2.Loopers";
-    exercise4_radio3_label.innerHTML= "3.Gloves";
-    exercise4_radio4_label.innerHTML= "4.Spade";
+    exercise4_radio1_label.innerHTML = "1.Trowel";
+    exercise4_radio2_label.innerHTML = "2.Loopers";
+    exercise4_radio3_label.innerHTML = "3.Gloves";
+    exercise4_radio4_label.innerHTML = "4.Spade";
     exercise4_correctAnswer.innerHTML = "thirdAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "Which of the following tools is best suited to level soil or compost?";
-    exercise5_radio1_label.innerHTML= "1.Spade";
-    exercise5_radio2_label.innerHTML= "2.Bow rake";
-    exercise5_radio3_label.innerHTML= "3.Hoe";
-    exercise5_radio4_label.innerHTML= "4.None of the above";
+    exercise5_radio1_label.innerHTML = "1.Spade";
+    exercise5_radio2_label.innerHTML = "2.Bow rake";
+    exercise5_radio3_label.innerHTML = "3.Hoe";
+    exercise5_radio4_label.innerHTML = "4.None of the above";
     exercise5_correctAnswer.innerHTML = "forthAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Bow Rake";
-    exercise6_a2.innerHTML="Trowel";
-    exercise6_a3.innerHTML="Spade";
-    exercise6_a4.innerHTML="Loopers";
-    exercise6_a5.innerHTML="Hoe";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/bowrake.png" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/trowel.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/spade.png" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/loopers.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/hoe.png" style="width:50px">';
+    exercise6_a1.innerHTML = "Bow Rake";
+    exercise6_a2.innerHTML = "Trowel";
+    exercise6_a3.innerHTML = "Spade";
+    exercise6_a4.innerHTML = "Loopers";
+    exercise6_a5.innerHTML = "Hoe";
+    exercise6_b1.innerHTML = '<img src="basics/basicsImages/bowrake.png" style="width:50px">';
+    exercise6_b2.innerHTML = '<img src="basics/basicsImages/trowel.png" style="width:50px">';
+    exercise6_b3.innerHTML = '<img src="basics/basicsImages/spade.png" style="width:50px">';
+    exercise6_b4.innerHTML = '<img src="basics/basicsImages/loopers.png" style="width:50px">';
+    exercise6_b5.innerHTML = '<img src="basics/basicsImages/hoe.png" style="width:50px">';
 
 
     if (y) {
@@ -512,10 +514,28 @@ buton_tools_quiz1.onclick = (() => {
 
 });
 
+buton_tools_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 2";
+    invalidQuiz();
+});
+buton_tools_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 3";
+    invalidQuiz();
+});
+buton_tools_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 4";
+    invalidQuiz();
+});
+buton_tools_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Tools Section - Quiz 5";
+    invalidQuiz();
+});
+
 buton_water_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Water Section - Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -536,32 +556,32 @@ buton_water_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "The best way to know how much water your landscape needs is:";
-    exercise4_radio1_label.innerHTML= "1.Searching on the internet.";
-    exercise4_radio2_label.innerHTML= "2.Asking a professional.";
-    exercise4_radio3_label.innerHTML= "3.Visiting/Observing the plants yourself.";
-    exercise4_radio4_label.innerHTML= "4.Asking the seller from whom you bought the plants.";
+    exercise4_radio1_label.innerHTML = "1.Searching on the internet.";
+    exercise4_radio2_label.innerHTML = "2.Asking a professional.";
+    exercise4_radio3_label.innerHTML = "3.Visiting/Observing the plants yourself.";
+    exercise4_radio4_label.innerHTML = "4.Asking the seller from whom you bought the plants.";
     exercise4_correctAnswer.innerHTML = "thirdAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "What is a good rule of thumb while watering ornamental gardens?";
-    exercise5_radio1_label.innerHTML= "1.One inch of water a month";
-    exercise5_radio2_label.innerHTML= "2.Two inches of water every other week.";
-    exercise5_radio3_label.innerHTML= "3.Water whenever it looks dry.";
-    exercise5_radio4_label.innerHTML= "4.One inch of water a week.";
+    exercise5_radio1_label.innerHTML = "1.One inch of water a month";
+    exercise5_radio2_label.innerHTML = "2.Two inches of water every other week.";
+    exercise5_radio3_label.innerHTML = "3.Water whenever it looks dry.";
+    exercise5_radio4_label.innerHTML = "4.One inch of water a week.";
     exercise5_correctAnswer.innerHTML = "forthAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Hot Climate";
-    exercise6_a2.innerHTML="Photosynthesis";
-    exercise6_a3.innerHTML="Orna -mental garden";
-    exercise6_a4.innerHTML="Transpi -ration";
-    exercise6_a5.innerHTML="Cooler Climate";
-    exercise6_b1.innerHTML="Two inches a week";
-    exercise6_b2.innerHTML="Food making process";
-    exercise6_b3.innerHTML="One inch a week";
-    exercise6_b4.innerHTML="Loosing water process";
-    exercise6_b5.innerHTML="Minimum watering";
+    exercise6_a1.innerHTML = "Hot Climate";
+    exercise6_a2.innerHTML = "Photosynthesis";
+    exercise6_a3.innerHTML = "Orna -mental garden";
+    exercise6_a4.innerHTML = "Transpi -ration";
+    exercise6_a5.innerHTML = "Cooler Climate";
+    exercise6_b1.innerHTML = "Two inches a week";
+    exercise6_b2.innerHTML = "Food making process";
+    exercise6_b3.innerHTML = "One inch a week";
+    exercise6_b4.innerHTML = "Loosing water process";
+    exercise6_b5.innerHTML = "Minimum watering";
 
 
     if (y) {
@@ -585,10 +605,28 @@ buton_water_quiz1.onclick = (() => {
 
 });
 
+buton_water_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Water Section - Quiz 2";
+    invalidQuiz();
+});
+buton_water_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Water Section - Quiz 3";
+    invalidQuiz();
+});
+buton_water_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Water Section - Quiz 4";
+    invalidQuiz();
+});
+buton_water_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Water Section - Quiz 5";
+    invalidQuiz();
+});
+
 buton_weather_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Weather Section-Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -609,32 +647,32 @@ buton_weather_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "Which of the following is NOT presented as a key element of weather for gardening?";
-    exercise4_radio1_label.innerHTML= "1.Heat";
-    exercise4_radio2_label.innerHTML= "2.Wind";
-    exercise4_radio3_label.innerHTML= "3.Freeze";
-    exercise4_radio4_label.innerHTML= "4.Humidity.";
+    exercise4_radio1_label.innerHTML = "1.Heat";
+    exercise4_radio2_label.innerHTML = "2.Wind";
+    exercise4_radio3_label.innerHTML = "3.Freeze";
+    exercise4_radio4_label.innerHTML = "4.Humidity.";
     exercise4_correctAnswer.innerHTML = "forthAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "What is the connection between weather and tending to your plants?";
-    exercise5_radio1_label.innerHTML= "1.Certain weathers make gardening easier, but temperature is the key aspect.";
-    exercise5_radio2_label.innerHTML= "2.You should only do certain chores during certain weathers.";
-    exercise5_radio3_label.innerHTML= "3.Weather has little to do with gardening.";
-    exercise5_radio4_label.innerHTML= "4.Temperature can influence gardening, but air humidity is more important.";
+    exercise5_radio1_label.innerHTML = "1.Certain weathers make gardening easier, but temperature is the key aspect.";
+    exercise5_radio2_label.innerHTML = "2.You should only do certain chores during certain weathers.";
+    exercise5_radio3_label.innerHTML = "3.Weather has little to do with gardening.";
+    exercise5_radio4_label.innerHTML = "4.Temperature can influence gardening, but air humidity is more important.";
     exercise5_correctAnswer.innerHTML = "firstAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Seeding";
-    exercise6_a2.innerHTML="Wedding";
-    exercise6_a3.innerHTML="Trans - planting";
-    exercise6_a4.innerHTML="Tilling";
-    exercise6_a5.innerHTML="Digging";
-    exercise6_b1.innerHTML="Right before rain";
-    exercise6_b2.innerHTML="After a good rain";
-    exercise6_b3.innerHTML="Cloudy weather";
-    exercise6_b4.innerHTML="Dry weather";
-    exercise6_b5.innerHTML="Normal weather";
+    exercise6_a1.innerHTML = "Seeding";
+    exercise6_a2.innerHTML = "Wedding";
+    exercise6_a3.innerHTML = "Trans - planting";
+    exercise6_a4.innerHTML = "Tilling";
+    exercise6_a5.innerHTML = "Digging";
+    exercise6_b1.innerHTML = "Right before rain";
+    exercise6_b2.innerHTML = "After a good rain";
+    exercise6_b3.innerHTML = "Cloudy weather";
+    exercise6_b4.innerHTML = "Dry weather";
+    exercise6_b5.innerHTML = "Normal weather";
 
 
     if (y) {
@@ -658,10 +696,28 @@ buton_weather_quiz1.onclick = (() => {
 
 });
 
+buton_weather_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Weather Section-Quiz 2";
+    invalidQuiz();
+});
+buton_weather_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Weather Section-Quiz 3";
+    invalidQuiz();
+});
+buton_weather_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Weather Section-Quiz 4";
+    invalidQuiz();
+});
+buton_weather_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Weather Section-Quiz 5";
+    invalidQuiz();
+});
+
 buton_soil_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Soil Section - Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -682,32 +738,32 @@ buton_soil_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "Which of the following is NOT a primary nutrient for plants?";
-    exercise4_radio1_label.innerHTML= "1.Nitrogen";
-    exercise4_radio2_label.innerHTML= "2.Potassium";
-    exercise4_radio3_label.innerHTML= "3.Phosphorus";
-    exercise4_radio4_label.innerHTML= "4.Oxygen";
+    exercise4_radio1_label.innerHTML = "1.Nitrogen";
+    exercise4_radio2_label.innerHTML = "2.Potassium";
+    exercise4_radio3_label.innerHTML = "3.Phosphorus";
+    exercise4_radio4_label.innerHTML = "4.Oxygen";
     exercise4_correctAnswer.innerHTML = "forthAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "Which of the following is usually part of a soil mix.";
-    exercise5_radio1_label.innerHTML= "1.Gravel";
-    exercise5_radio2_label.innerHTML= "2.Rocks";
-    exercise5_radio3_label.innerHTML= "3.Silt";
-    exercise5_radio4_label.innerHTML= "4.All of the above";
+    exercise5_radio1_label.innerHTML = "1.Gravel";
+    exercise5_radio2_label.innerHTML = "2.Rocks";
+    exercise5_radio3_label.innerHTML = "3.Silt";
+    exercise5_radio4_label.innerHTML = "4.All of the above";
     exercise5_correctAnswer.innerHTML = "thirdAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Sand";
-    exercise6_a2.innerHTML="Compost";
-    exercise6_a3.innerHTML="Clay";
-    exercise6_a4.innerHTML="Silt";
-    exercise6_a5.innerHTML="Loam";
-    exercise6_b1.innerHTML='<img src="basics/basicsImages/img1soil.jpg" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="basics/basicsImages/compost.png" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="basics/basicsImages/img3soil.jpg" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="basics/basicsImages/silt.png" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="basics/basicsImages/img2soil.jpg" style="width:50px">';
+    exercise6_a1.innerHTML = "Sand";
+    exercise6_a2.innerHTML = "Com- post";
+    exercise6_a3.innerHTML = "Clay";
+    exercise6_a4.innerHTML = "Silt";
+    exercise6_a5.innerHTML = "Loam";
+    exercise6_b1.innerHTML = '<img src="basics/basicsImages/img1soil.jpg" style="width:50px">';
+    exercise6_b2.innerHTML = '<img src="basics/basicsImages/compost.png" style="width:50px">';
+    exercise6_b3.innerHTML = '<img src="basics/basicsImages/img3soil.jpg" style="width:50px">';
+    exercise6_b4.innerHTML = '<img src="basics/basicsImages/silt.png" style="width:50px">';
+    exercise6_b5.innerHTML = '<img src="basics/basicsImages/img2soil.jpg" style="width:50px">';
 
 
     if (y) {
@@ -731,10 +787,28 @@ buton_soil_quiz1.onclick = (() => {
 
 });
 
+buton_soil_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Soil Section - Quiz 2";
+    invalidQuiz();
+});
+buton_soil_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Soil Section - Quiz 3";
+    invalidQuiz();
+});
+buton_soil_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Soil Section - Quiz 4";
+    invalidQuiz();
+});
+buton_soil_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Soil Section - Quiz 5";
+    invalidQuiz();
+});
+
 buton_flowers_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Flowers Section-Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -755,32 +829,32 @@ buton_flowers_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "Which of the following is NOT a primary an evergreen?";
-    exercise4_radio1_label.innerHTML= "1.Mother-in-law s tongue.";
-    exercise4_radio2_label.innerHTML= "2.Arborvitae.";
-    exercise4_radio3_label.innerHTML= "3.Boxwood.";
-    exercise4_radio4_label.innerHTML= "4.Blue Star Juniper.";
+    exercise4_radio1_label.innerHTML = "1.Mother-in-law s tongue.";
+    exercise4_radio2_label.innerHTML = "2.Arborvitae.";
+    exercise4_radio3_label.innerHTML = "3.Boxwood.";
+    exercise4_radio4_label.innerHTML = "4.Blue Star Juniper.";
     exercise4_correctAnswer.innerHTML = "firstAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "Which of the following succulents is an indoor plant?";
-    exercise5_radio1_label.innerHTML= "1.Lilium";
-    exercise5_radio2_label.innerHTML= "2.Hydrangea";
-    exercise5_radio3_label.innerHTML= "3.Jade plant";
-    exercise5_radio4_label.innerHTML= "4.Aloe";
+    exercise5_radio1_label.innerHTML = "1.Lilium";
+    exercise5_radio2_label.innerHTML = "2.Hydrangea";
+    exercise5_radio3_label.innerHTML = "3.Jade plant";
+    exercise5_radio4_label.innerHTML = "4.Aloe";
     exercise5_correctAnswer.innerHTML = "thirdAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Jade plant";
-    exercise6_a2.innerHTML="Hydran -gea";
-    exercise6_a3.innerHTML="Box - wood";
-    exercise6_a4.innerHTML="Orchid";
-    exercise6_a5.innerHTML="Agave";
-    exercise6_b1.innerHTML='<img src="plants/plantsImages/jade.jpg" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="plants/plantsImages/hortensie.jpg" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="plants/plantsImages/boxwood.jpg" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="plants/plantsImages/Orchid.jpg" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="plants/plantsImages/agave.jpg" style="width:50px">';
+    exercise6_a1.innerHTML = "Jade plant";
+    exercise6_a2.innerHTML = "Hydran -gea";
+    exercise6_a3.innerHTML = "Box - wood";
+    exercise6_a4.innerHTML = "Orchid";
+    exercise6_a5.innerHTML = "Agave";
+    exercise6_b1.innerHTML = '<img src="plants/plantsImages/jade.jpg" style="width:50px">';
+    exercise6_b2.innerHTML = '<img src="plants/plantsImages/hortensie.jpg" style="width:50px">';
+    exercise6_b3.innerHTML = '<img src="plants/plantsImages/boxwood.jpg" style="width:50px">';
+    exercise6_b4.innerHTML = '<img src="plants/plantsImages/Orchid.jpg" style="width:50px">';
+    exercise6_b5.innerHTML = '<img src="plants/plantsImages/agave.jpg" style="width:50px">';
 
 
     if (y) {
@@ -804,10 +878,28 @@ buton_flowers_quiz1.onclick = (() => {
 
 });
 
+buton_flowers_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Flowers Section-Quiz 2";
+    invalidQuiz();
+});
+buton_flowers_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Flowers Section-Quiz 3";
+    invalidQuiz();
+});
+buton_flowers_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Flowers Section-Quiz 4";
+    invalidQuiz();
+});
+buton_flowers_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Flowers Section-Quiz 5";
+    invalidQuiz();
+});
+
 buton_trees_quiz1.onclick = (() => {
     string.innerHTML = "Solving the quiz for Trees Section - Quiz 1";
-    select_aQuiz.style.display="none";
+    select_aQuiz.style.display = "none";
     begin_quiz.style.display = "block";
+    select_invalidQuiz.style.display = "none";
     timer_container.style.display = "none";
     exercise_container.style.display = "none";
     buttons_container.style.display = "none";
@@ -828,32 +920,32 @@ buton_trees_quiz1.onclick = (() => {
 
     exercise4_number.innerHTML = "Exercise 4: Choose the correct single answer";
     exercise4_question.innerHTML = "Which of the following fruit trees is grown more for it’s blossom?";
-    exercise4_radio1_label.innerHTML= "1.Apple tree.";
-    exercise4_radio2_label.innerHTML= "2.Peach tree.";
-    exercise4_radio3_label.innerHTML= "3.Quince tree.";
-    exercise4_radio4_label.innerHTML= "4.Cherry tree.";
+    exercise4_radio1_label.innerHTML = "1.Apple tree.";
+    exercise4_radio2_label.innerHTML = "2.Peach tree.";
+    exercise4_radio3_label.innerHTML = "3.Quince tree.";
+    exercise4_radio4_label.innerHTML = "4.Cherry tree.";
     exercise4_correctAnswer.innerHTML = "thirdAnswer";
 
     exercise5_number.innerHTML = "Exercise 5: Choose the correct single answer";
     exercise5_question.innerHTML = "Which of the following trees has needle like leaves?";
-    exercise5_radio1_label.innerHTML= "1.Quince tree";
-    exercise5_radio2_label.innerHTML= "2.Willow tree";
-    exercise5_radio3_label.innerHTML= "3.Pine tree";
-    exercise5_radio4_label.innerHTML= "4.Birch tree";
+    exercise5_radio1_label.innerHTML = "1.Quince tree";
+    exercise5_radio2_label.innerHTML = "2.Willow tree";
+    exercise5_radio3_label.innerHTML = "3.Pine tree";
+    exercise5_radio4_label.innerHTML = "4.Birch tree";
     exercise5_correctAnswer.innerHTML = "forthAnswer";
 
     exercise6_number.innerHTML = "Exercise 6: Match each element from the left with the corresponding element on the right";
 
-    exercise6_a1.innerHTML="Willow tree";
-    exercise6_a2.innerHTML="Maple";
-    exercise6_a3.innerHTML="Apricot";
-    exercise6_a4.innerHTML="Birch";
-    exercise6_a5.innerHTML="Peach";
-    exercise6_b1.innerHTML='<img src="trees/treesImages/willow.jpg" style="width:50px">';
-    exercise6_b2.innerHTML='<img src="trees/treesImages/maple.jpg" style="width:50px">';
-    exercise6_b3.innerHTML='<img src="trees/treesImages/apricot.jpg" style="width:50px">';
-    exercise6_b4.innerHTML='<img src="trees/treesImages/birch.jpg" style="width:50px">';
-    exercise6_b5.innerHTML='<img src="trees/treesImages/peach.jpg" style="width:50px">';
+    exercise6_a1.innerHTML = "Willow tree";
+    exercise6_a2.innerHTML = "Maple";
+    exercise6_a3.innerHTML = "Apricot";
+    exercise6_a4.innerHTML = "Birch";
+    exercise6_a5.innerHTML = "Peach";
+    exercise6_b1.innerHTML = '<img src="trees/treesImages/willow.jpg" style="width:50px">';
+    exercise6_b2.innerHTML = '<img src="trees/treesImages/maple.jpg" style="width:50px">';
+    exercise6_b3.innerHTML = '<img src="trees/treesImages/apricot.jpg" style="width:50px">';
+    exercise6_b4.innerHTML = '<img src="trees/treesImages/birch.jpg" style="width:50px">';
+    exercise6_b5.innerHTML = '<img src="trees/treesImages/peach.jpg" style="width:50px">';
 
 
     if (y) {
@@ -877,7 +969,54 @@ buton_trees_quiz1.onclick = (() => {
 
 });
 
+buton_trees_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Trees Section - Quiz 2";
+    invalidQuiz();
+});
+buton_trees_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Trees Section - Quiz 3";
+    invalidQuiz();
+});
+buton_trees_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Trees Section - Quiz 4";
+    invalidQuiz();
+});
+buton_trees_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for Trees Section - Quiz 5";
+    invalidQuiz();
+});
 
+
+buton_vegetables_quiz1.onclick = (() => {
+    string.innerHTML = "Solving the quiz for vegetables Section-Quiz 1";
+    invalidQuiz();
+});
+
+buton_vegetables_quiz2.onclick = (() => {
+    string.innerHTML = "Solving the quiz for vegetables Section-Quiz 2";
+    invalidQuiz();
+});
+buton_vegetables_quiz3.onclick = (() => {
+    string.innerHTML = "Solving the quiz for vegetables Section-Quiz 3";
+    invalidQuiz();
+});
+buton_vegetables_quiz4.onclick = (() => {
+    string.innerHTML = "Solving the quiz for vegetables Section-Quiz 4";
+    invalidQuiz();
+});
+buton_vegetables_quiz5.onclick = (() => {
+    string.innerHTML = "Solving the quiz for vegetables Section-Quiz 5";
+    invalidQuiz();
+});
+
+function invalidQuiz() {
+    begin_quiz.style.display = "none";
+    select_aQuiz.style.display = "none";
+    timer_container.style.display = "none";
+    exercise_container.style.display = "none";
+    buttons_container.style.display = "none";
+    select_invalidQuiz.style.display = "block";
+}
 
 backButtonQuiz.onclick = (() => {
     if (y) {
